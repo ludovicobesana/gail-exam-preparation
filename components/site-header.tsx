@@ -6,7 +6,7 @@ export function SiteHeader() {
       <div className="max-w-4xl mx-auto px-4 py-4">
         <nav className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <Link href="/" className="text-lg font-bold tracking-tight no-underline hover:underline">
-            GCGAI-LEADER
+            GAIL
           </Link>
           <div className="flex flex-wrap gap-4 text-sm">
             <Link href="/study">STUDY</Link>
