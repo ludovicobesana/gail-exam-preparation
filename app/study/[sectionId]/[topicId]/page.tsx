@@ -77,6 +77,7 @@ export default async function TopicPage({ params }: Props) {
           </ul>
         </section>
 
+
         {/* Official Documentation */}
         <section className="mb-6">
           <h2 className="text-lg font-bold border-b-2 border-foreground pb-2 mb-4">OFFICIAL DOCUMENTATION</h2>
@@ -91,6 +92,26 @@ export default async function TopicPage({ params }: Props) {
             ))}
           </ul>
         </section>
+
+        {/* Study Q&A */}
+        {topic.studyQA && topic.studyQA.length > 0 && (
+          <section className="mb-6">
+            <h2 className="text-lg font-bold border-b-2 border-foreground pb-2 mb-4">STUDY Q&A</h2>
+            <ul className="space-y-6">
+              {topic.studyQA.map((qa, i) => (
+                <li key={i} className="border p-4 rounded-md bg-muted">
+                  <div className="font-semibold mb-2">{qa.question}</div>
+                  <div className="mb-2">{qa.answer}</div>
+                  <div className="text-xs text-muted-foreground">
+                    <a href={qa.officialSource} target="_blank" rel="noopener noreferrer" className="underline">
+                      Official source
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* Related Questions */}
         {relatedQuestions.length > 0 && (

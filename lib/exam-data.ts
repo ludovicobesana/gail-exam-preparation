@@ -10,6 +10,18 @@ export const EXAM_SECTIONS = [
       {
         id: "llm-basics",
         title: "Large Language Model Fundamentals",
+        studyQA: [
+          {
+            question: "What is a Large Language Model and what is it trained on?",
+            answer: "A Large Language Model (LLM) is a machine learning model trained on vast amounts of textual data to learn linguistic patterns, semantic relationships, and syntax. LLMs are designed to understand and generate natural language, adapting to multiple tasks without domain-specific training.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview"
+          },
+          {
+            question: "What do tokens represent and why is token capacity important?",
+            answer: "Tokens are the minimal units of text (words, subwords, or characters) processed by the model. Token capacity defines the maximum amount of text the model can handle in input and output; exceeding this limit leads to context loss or generation errors.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview"
+          }
+        ],
         concepts: [
           "Transformer architecture basics",
           "Tokens and tokenization",
@@ -35,6 +47,13 @@ export const EXAM_SECTIONS = [
       {
         id: "gemini-vs-gemma",
         title: "Gemini vs Gemma",
+        studyQA: [
+          {
+            question: "What is the main difference between Gemini and Gemma?",
+            answer: "Gemini is a proprietary, managed model accessible via API on Google Cloud, ideal for ready-to-use, scalable solutions. Gemma is open-weight, allows self-hosting and customization, but requires infrastructure management and attention to compliance and licensing.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini"
+          }
+        ],
         concepts: [
           "Gemini: Proprietary, API-accessed, managed by Google",
           "Gemma: Open weights, self-hosted, customizable",
@@ -66,6 +85,28 @@ export const EXAM_SECTIONS = [
       {
         id: "prompting-techniques",
         title: "Prompting Techniques",
+        studyQA: [
+          {
+            question: "What is zero-shot prompting?",
+            answer: "Zero-shot prompting is a technique where the model is given a task without any example. It is suitable for simple tasks where the model can generalize from its pre-training.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          },
+          {
+            question: "What is few-shot prompting and when is it preferable?",
+            answer: "Few-shot prompting involves providing the model with a few examples to guide its output. It is preferable when you need consistent formatting or when the task is ambiguous without context.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          },
+          {
+            question: "What is chaining and why is it useful in complex workflows?",
+            answer: "Chaining refers to the sequential use of multiple prompts, where the output of one prompt becomes the input for the next. This is useful for decomposing complex tasks into manageable steps.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          },
+          {
+            question: "What is Chain of Thought prompting and when should it be used?",
+            answer: "Chain of Thought prompting encourages the model to reason step-by-step, making it suitable for tasks that require logical reasoning or multi-step problem solving.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          }
+        ],
         concepts: [
           "Zero-shot: No examples provided",
           "One-shot: Single example provided",
