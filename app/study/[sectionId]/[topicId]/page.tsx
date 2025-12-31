@@ -49,12 +49,16 @@ export default async function TopicPage({ params }: Props) {
         <section className="mb-6">
           <h2 className="text-lg font-bold border-b-2 border-foreground pb-2 mb-4">KEY CONCEPTS</h2>
           <ul className="space-y-2">
-            {topic.concepts.map((concept, i) => (
-              <li key={i} className="flex gap-2">
-                <span className="text-muted-foreground">→</span>
-                <span>{concept}</span>
-              </li>
-            ))}
+            {Array.isArray(topic.concepts) && topic.concepts.length > 0 ? (
+              topic.concepts.map((concept, i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="text-muted-foreground">→</span>
+                  <span>{concept}</span>
+                </li>
+              ))
+            ) : (
+              <li className="text-muted-foreground">No concepts listed for this topic.</li>
+            )}
           </ul>
         </section>
 
@@ -68,12 +72,16 @@ export default async function TopicPage({ params }: Props) {
         <section className="mb-6">
           <h2 className="text-lg font-bold border-b-2 border-foreground pb-2 mb-4">COMMON TRAPS</h2>
           <ul className="space-y-2">
-            {topic.traps.map((trap, i) => (
-              <li key={i} className="flex gap-2">
-                <span className="text-destructive font-bold">!</span>
-                <span>{trap}</span>
-              </li>
-            ))}
+            {Array.isArray(topic.traps) && topic.traps.length > 0 ? (
+              topic.traps.map((trap, i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="text-destructive font-bold">!</span>
+                  <span>{trap}</span>
+                </li>
+              ))
+            ) : (
+              <li className="text-muted-foreground">No traps listed for this topic.</li>
+            )}
           </ul>
         </section>
 
@@ -82,24 +90,28 @@ export default async function TopicPage({ params }: Props) {
         <section className="mb-6">
           <h2 className="text-lg font-bold border-b-2 border-foreground pb-2 mb-4">OFFICIAL DOCUMENTATION</h2>
           <ul className="space-y-2">
-            {topic.officialDocs.map((doc, i) => (
-              <li key={i}>
-                <a href={doc.url} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-start">
-                  <span className="text-muted-foreground">[DOC]</span>
-                  <span>{doc.title}</span>
-                </a>
-              </li>
-            ))}
+            {Array.isArray(topic.officialDocs) && topic.officialDocs.length > 0 ? (
+              topic.officialDocs.map((doc: { url: string; title: string }, i: number) => (
+                <li key={i}>
+                  <a href={doc.url} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-start">
+                    <span className="text-muted-foreground">[DOC]</span>
+                    <span>{doc.title}</span>
+                  </a>
+                </li>
+              ))
+            ) : (
+              <li className="text-muted-foreground">No official docs for this topic.</li>
+            )}
           </ul>
         </section>
 
         {/* Study Q&A */}
-        {topic.studyQA && topic.studyQA.length > 0 && (
+        {Array.isArray(topic.studyQA) && topic.studyQA.length > 0 && (
           <section className="mb-6">
             <h2 className="text-lg font-bold border-b-2 border-foreground pb-2 mb-4">STUDY Q&A</h2>
             <ul className="space-y-6">
-              {topic.studyQA.map((qa, i) => (
-                <li key={i} className="border p-4 rounded-md bg-muted">
+              {topic.studyQA.map((qa: { question: string; answer: string; officialSource: string }, i: number) => (
+                <li key={"topic-" + i} className="border p-4 rounded-md bg-muted">
                   <div className="font-semibold mb-2">{qa.question}</div>
                   <div className="mb-2">{qa.answer}</div>
                   <div className="text-xs text-muted-foreground">

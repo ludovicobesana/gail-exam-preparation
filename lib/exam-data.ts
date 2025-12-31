@@ -8,9 +8,65 @@ export const EXAM_SECTIONS = [
     description: "Core concepts, architectures, and foundational knowledge",
     topics: [
       {
+        id: "introduction",
+        title: "Introduction",
+        studyQA: [
+          {
+            question: "What is the main goal of the Google Cloud GenAI Leader certification?",
+            answer: "The main goal of the Google Cloud GenAI Leader certification is to validate a candidate's ability to understand, evaluate, and lead the adoption of generative AI solutions on Google Cloud, focusing on responsible, secure, and effective use of GenAI technologies in business scenarios.",
+            officialSource: "https://cloud.google.com/certification/generative-ai-leader"
+          },
+          {
+            question: "What types of questions and competencies does the GenAI Leader exam primarily assess?",
+            answer: "The GenAI Leader exam primarily assesses conceptual understanding, scenario-based decision making, and the ability to select appropriate Google Cloud GenAI products and practices. It focuses on responsible AI, security, business value, and solution design rather than technical implementation details.",
+            officialSource: "https://cloud.google.com/certification/generative-ai-leader"
+          }
+        ]
+      },
+      {
         id: "llm-basics",
         title: "Large Language Model Fundamentals",
         studyQA: [
+          {
+            question: "What is Artificial Intelligence (AI) in general terms?",
+            answer: "Artificial Intelligence (AI) refers to systems or machines that mimic human intelligence to perform tasks and can iteratively improve themselves based on the information they collect. AI encompasses a wide range of technologies, including rule-based systems, machine learning, and deep learning.",
+            officialSource: "https://cloud.google.com/learn/what-is-artificial-intelligence"
+          },
+          {
+            question: "What is the main difference between traditional AI and Generative AI?",
+            answer: "Traditional AI focuses on recognizing patterns and making predictions or classifications based on existing data, while Generative AI creates new content such as text, images, or code by learning from large datasets. Generative AI models, like LLMs, can generate novel outputs rather than just analyze or classify data.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview"
+          },
+          {
+            question: "What is Natural Language Processing (NLP) and why is it fundamental for LLMs?",
+            answer: "Natural Language Processing (NLP) is a field of AI focused on enabling machines to understand, interpret, and generate human language. NLP is fundamental for LLMs because it allows them to process and generate text in a way that is meaningful and contextually appropriate for users.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview"
+          },
+          {
+            question: "What is the difference between supervised and unsupervised learning?",
+            answer: "Supervised learning uses labeled data to train models to predict outcomes, while unsupervised learning finds patterns or groupings in data without explicit labels. Supervised learning is common for classification and regression, whereas unsupervised is used for clustering and dimensionality reduction.",
+            officialSource: "https://cloud.google.com/vertex-ai/docs/general/ml-use-cases"
+          },
+          {
+            question: "What is a machine learning model?",
+            answer: "A machine learning model is a mathematical representation trained on data to recognize patterns and make predictions or decisions without being explicitly programmed for each task.",
+            officialSource: "https://cloud.google.com/vertex-ai/docs/general/ml-use-cases"
+          },
+          {
+            question: "What is a feature in an ML model?",
+            answer: "A feature is an individual measurable property or characteristic used as input to a machine learning model. Features are critical for the model to learn and make accurate predictions.",
+            officialSource: "https://cloud.google.com/vertex-ai/docs/featurestore/overview"
+          },
+          {
+            question: "What does inference mean in an ML or LLM context?",
+            answer: "Inference is the process of using a trained model to make predictions or generate outputs based on new, unseen data. In LLMs, inference refers to generating text or answers from a prompt.",
+            officialSource: "https://cloud.google.com/vertex-ai/docs/predictions/overview"
+          },
+          {
+            question: "What is a foundation model and why is it fundamental to GenAI?",
+            answer: "A foundation model is a large, pre-trained model that serves as a base for a wide range of downstream tasks. It is fundamental to GenAI because it provides general capabilities that can be adapted to specific applications through fine-tuning or prompting.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview"
+          },
           {
             question: "What is a Large Language Model and what is it trained on?",
             answer: "A Large Language Model (LLM) is a machine learning model trained on vast amounts of textual data to learn linguistic patterns, semantic relationships, and syntax. LLMs are designed to understand and generate natural language, adapting to multiple tasks without domain-specific training.",
@@ -20,6 +76,11 @@ export const EXAM_SECTIONS = [
             question: "What do tokens represent and why is token capacity important?",
             answer: "Tokens are the minimal units of text (words, subwords, or characters) processed by the model. Token capacity defines the maximum amount of text the model can handle in input and output; exceeding this limit leads to context loss or generation errors.",
             officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview"
+          },
+          {
+            question: "What is prompt tuning and how does it differ from fine-tuning?",
+            answer: "Prompt tuning involves optimizing the input prompts to guide the model's output, while fine-tuning adjusts the model's internal parameters using additional training data. Prompt tuning is less resource-intensive and does not require retraining the model.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
           }
         ],
         concepts: [
@@ -165,6 +226,389 @@ export const EXAM_SECTIONS = [
     description: "Products, services, and when to use each",
     topics: [
       {
+        id: "overview",
+        title: "Overview",
+        studyQA: [
+          {
+            question: "What is Model Garden in Vertex AI?",
+            answer: "Model Garden is a curated collection of Google and third-party AI models available in Vertex AI, allowing users to discover, evaluate, and deploy models for various use cases without building from scratch.",
+            officialSource: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform"
+          },
+          {
+            question: "What is Google Agentspace?",
+            answer: "Google Agentspace is a centralized platform for managing and deploying AI agents that interact with enterprise data and systems, enabling employees to access information and automate tasks securely.",
+            officialSource: "https://cloud.google.com/agentspace"
+          },
+          {
+            question: "What is NotebookLM and what is it designed for?",
+            answer: "NotebookLM is an AI-first notebook that grounds responses in your uploaded documents, designed for research, summarization, and finding connections in your materials.",
+            officialSource: "https://notebooklm.google/"
+          },
+          {
+            question: "How does Gemini integrate with Google Workspace?",
+            answer: "Gemini integrates with Google Workspace by providing AI-powered features such as smart compose, summarization, and content generation across Gmail, Docs, Sheets, and other Workspace apps.",
+            officialSource: "https://cloud.google.com/gemini-for-workspace"
+          },
+          {
+            question: "What is the difference between standard Gemini and a Custom Gem in Google Workspace?",
+            answer: "Standard Gemini provides general AI features, while a Custom Gem is tailored to specific workflows or domains, allowing organizations to extend Gemini's capabilities for unique requirements.",
+            officialSource: "https://cloud.google.com/gemini-for-workspace"
+          },
+          {
+            question: "How does Google Vids use GenAI?",
+            answer: "Google Vids leverages GenAI to help users create, edit, and enhance videos by generating scripts, scenes, and visual content based on user input.",
+            officialSource: "https://workspaceupdates.googleblog.com/2024/04/google-vids-ai-video-app.html"
+          }
+        ]
+      },
+      {
+        id: "models",
+        title: "Models",
+        studyQA: [
+          {
+            question: "What is Model Garden in Vertex AI?",
+            answer: "Model Garden is a curated collection of Google and third-party AI models available in Vertex AI, allowing users to discover, evaluate, and deploy models for various use cases without building from scratch.",
+            officialSource: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform"
+          },
+          {
+            question: "What is the main difference between Gemini and Gemma?",
+            answer: "Gemini is a proprietary, managed model accessible via API on Google Cloud, ideal for ready-to-use, scalable solutions. Gemma is open-weight, allows self-hosting and customization, but requires infrastructure management and attention to compliance and licensing.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini"
+          },
+          {
+            question: "What is the difference between Imagen and Veo?",
+            answer: "Imagen is a text-to-image generation model, while Veo is designed for text-to-video generation. Imagen creates photorealistic images from text, Veo generates videos from text or other inputs.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview"
+          },
+          {
+            question: "What does it mean for a Google model to be multimodal?",
+            answer: "A multimodal model can process and generate multiple types of data, such as text, images, audio, and video, enabling more flexible and comprehensive AI applications.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini"
+          }
+        ],
+        concepts: [],
+        examFocus: "Know the differences between model types and when to use each. Exam tests model selection for specific tasks.",
+        traps: [],
+        officialDocs: [
+          { title: "Model Garden", url: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform" },
+          { title: "Gemini models", url: "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini" },
+          { title: "Imagen overview", url: "https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview" }
+        ]
+      },
+      {
+        id: "engagement-suite",
+                          title: "Engagement Suite",
+                          studyQA: [
+                            {
+                              question: "What is Agent Assist and in what context is it used?",
+                              answer: "Agent Assist is a Google Cloud solution that provides real-time support to contact center agents by suggesting responses, summarizing conversations, and surfacing relevant knowledge, improving efficiency and customer experience.",
+                              officialSource: "https://cloud.google.com/agent-assist/docs/overview"
+                            },
+                            {
+                              question: "How is GenAI used for summarization in contact centers?",
+                              answer: "GenAI is used to automatically summarize customer interactions, providing agents with concise overviews of conversations, which helps in faster resolution and better customer service.",
+                              officialSource: "https://cloud.google.com/agent-assist/docs/summarization"
+                            },
+                            {
+                              question: "What is Knowledge Assist and what value does it bring to agents?",
+                              answer: "Knowledge Assist surfaces relevant articles and information from knowledge bases in real time, enabling agents to quickly find accurate answers and improve first-contact resolution.",
+                              officialSource: "https://cloud.google.com/agent-assist/docs/knowledge-assist"
+                            },
+                            {
+                              question: "What is Smart Reply and what problem does it solve?",
+                              answer: "Smart Reply suggests contextually appropriate responses to agents during customer interactions, reducing response time and improving consistency.",
+                              officialSource: "https://cloud.google.com/agent-assist/docs/smart-reply"
+                            },
+                            {
+                              question: "What are conversational agents?",
+                              answer: "Conversational agents are AI systems designed to interact with users in natural language, handling tasks such as answering questions, providing recommendations, or completing transactions.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview"
+                            },
+                            {
+                              question: "What is the purpose of the conversational agents simulator?",
+                              answer: "The simulator allows developers to test and refine conversational agent behavior in a controlled environment before deploying to production.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview"
+                            },
+                            {
+                              question: "What is Conversational Insights and what type of insights does it provide?",
+                              answer: "Conversational Insights analyzes interactions to provide actionable data on customer sentiment, agent performance, and conversation trends, supporting continuous improvement.",
+                              officialSource: "https://cloud.google.com/agent-assist/docs/insights"
+                            },
+                            {
+                              question: "What is Google Cloud Contact Center as a Service (CCaaS)?",
+                              answer: "Google Cloud CCaaS is a cloud-based platform that unifies communication channels and integrates AI-powered tools to enhance customer support operations at scale.",
+                              officialSource: "https://cloud.google.com/solutions/contact-center"
+                            }
+                          ],
+                          concepts: [],
+                          examFocus: "Understand the components and value of the Engagement Suite. Exam tests ability to select the right tool for contact center scenarios.",
+                          traps: [],
+                          officialDocs: [
+                            { title: "Agent Assist overview", url: "https://cloud.google.com/agent-assist/docs/overview" },
+                            { title: "Contact Center AI", url: "https://cloud.google.com/solutions/contact-center" }
+                          ]
+                        },
+                        {
+                          id: "agentspace",
+                          title: "Agentspace",
+                          studyQA: [
+                            {
+                              question: "What is Google Agentspace?",
+                              answer: "Google Agentspace is a centralized platform for managing and deploying AI agents that interact with enterprise data and systems, enabling employees to access information and automate tasks securely.",
+                              officialSource: "https://cloud.google.com/agentspace"
+                            },
+                            {
+                              question: "What is NotebookLM and what is it designed for?",
+                              answer: "NotebookLM is an AI-first notebook that grounds responses in your uploaded documents, designed for research, summarization, and finding connections in your materials.",
+                              officialSource: "https://notebooklm.google/"
+                            },
+                            {
+                              question: "When is it most effective to use NotebookLM?",
+                              answer: "NotebookLM is most effective when you need to analyze, summarize, and connect information across multiple documents, such as for research or report preparation.",
+                              officialSource: "https://notebooklm.google/"
+                            }
+                          ],
+                          concepts: [],
+                          examFocus: "Know the use cases for Agentspace and NotebookLM. Exam tests ability to select the right tool for document and knowledge management.",
+                          traps: [],
+                          officialDocs: [
+                            { title: "Agentspace", url: "https://cloud.google.com/agentspace" },
+                            { title: "NotebookLM", url: "https://notebooklm.google/" }
+                          ]
+                        },
+                        {
+                          id: "gemini-workspace",
+                          title: "Gemini with Google Workspace",
+                          studyQA: [
+                            {
+                              question: "How does Gemini integrate with Google Workspace?",
+                              answer: "Gemini integrates with Google Workspace by providing AI-powered features such as smart compose, summarization, and content generation across Gmail, Docs, Sheets, and other Workspace apps.",
+                              officialSource: "https://cloud.google.com/gemini-for-workspace"
+                            },
+                            {
+                              question: "What are Gemini Gems?",
+                              answer: "Gemini Gems are custom AI-powered workflows or assistants built within Google Workspace to automate tasks, answer questions, or provide recommendations tailored to specific business needs.",
+                              officialSource: "https://cloud.google.com/gemini-for-workspace"
+                            },
+                            {
+                              question: "What is the difference between standard Gemini and a Custom Gem in Google Workspace?",
+                              answer: "Standard Gemini provides general AI features, while a Custom Gem is tailored to specific workflows or domains, allowing organizations to extend Gemini's capabilities for unique requirements.",
+                              officialSource: "https://cloud.google.com/gemini-for-workspace"
+                            },
+                            {
+                              question: "How does Google Vids use GenAI?",
+                              answer: "Google Vids leverages GenAI to help users create, edit, and enhance videos by generating scripts, scenes, and visual content based on user input.",
+                              officialSource: "https://workspaceupdates.googleblog.com/2024/04/google-vids-ai-video-app.html"
+                            }
+                          ],
+                          concepts: [],
+                          examFocus: "Understand Gemini's integration and customization in Workspace. Exam tests ability to distinguish between standard and custom AI workflows.",
+                          traps: [],
+                          officialDocs: [
+                            { title: "Gemini for Workspace", url: "https://cloud.google.com/gemini-for-workspace" }
+                          ]
+                        },
+                        {
+                          id: "vertex-ai-studio",
+                          title: "Vertex AI Studio",
+                          studyQA: [
+                            {
+                              question: "What is the purpose of Chat mode in Vertex AI Studio?",
+                              answer: "Chat mode in Vertex AI Studio allows users to interact with generative models conversationally, test prompts, and prototype chat-based applications.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal"
+                            },
+                            {
+                              question: "What is the Image section of Vertex AI Studio used for?",
+                              answer: "The Image section is used to generate, edit, and experiment with images using GenAI models, supporting creative and design workflows.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview"
+                            },
+                            {
+                              question: "What is the role of the Video section in Vertex AI Studio?",
+                              answer: "The Video section enables users to generate and manipulate video content using GenAI, supporting tasks like video creation and editing.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/video/overview"
+                            },
+                            {
+                              question: "What does the Music section allow you to do?",
+                              answer: "The Music section allows users to generate and experiment with music and audio content using GenAI models.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/overview"
+                            },
+                            {
+                              question: "What use cases does the Speech section cover?",
+                              answer: "The Speech section covers use cases such as speech-to-text, text-to-speech, and audio content generation, enabling voice-driven applications.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/overview"
+                            },
+                            {
+                              question: "What does Live mode enable in Vertex AI Studio?",
+                              answer: "Live mode enables real-time interaction and testing of GenAI models, supporting rapid prototyping and deployment of live applications.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal"
+                            }
+                          ],
+                          concepts: [],
+                          examFocus: "Know the capabilities of each section in Vertex AI Studio. Exam tests ability to select the right tool for prototyping and content creation.",
+                          traps: [],
+                          officialDocs: [
+                            { title: "Vertex AI Studio", url: "https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal" }
+                          ]
+                        },
+                        {
+                          id: "agent-builder",
+                          title: "Agent Builder",
+                          studyQA: [
+                            {
+                              question: "What is the Agent Garden?",
+                              answer: "Agent Garden is a collection of pre-built and community-contributed agents in Vertex AI Agent Builder, allowing users to discover, test, and deploy agents for various use cases.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview"
+                            },
+                            {
+                              question: "What is the Agent-to-Agent (A2A) architecture?",
+                              answer: "Agent-to-Agent (A2A) architecture enables multiple agents to collaborate and communicate, orchestrating complex workflows and tasks across different domains.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview"
+                            },
+                            {
+                              question: "What is the purpose of Agent-to-Agent example code?",
+                              answer: "Agent-to-Agent example code demonstrates how to implement communication and collaboration between agents, serving as a reference for building multi-agent solutions.",
+                              officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview"
+                            }
+                          ],
+                          concepts: [],
+                          examFocus: "Understand the features and use cases of Agent Builder. Exam tests ability to leverage pre-built agents and design multi-agent workflows.",
+                          traps: [],
+                          officialDocs: [
+                            { title: "Agent Builder overview", url: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview" }
+                          ]
+                        },
+                  {
+                    id: "security",
+                    title: "Security",
+                    studyQA: [
+                      {
+                        question: "Why must security be considered at every stage of the ML lifecycle?",
+                        answer: "Security must be considered at every stage of the ML lifecycle to protect data, models, and infrastructure from threats such as data leakage, model theft, and adversarial attacks. Proactive security ensures compliance, privacy, and trust in AI systems.",
+                        officialSource: "https://cloud.google.com/security/ai"
+                      },
+                      {
+                        question: "What is the purpose of Google's Secure AI Framework (SAIF)?",
+                        answer: "Google's Secure AI Framework (SAIF) provides guidelines and best practices to help organizations build, deploy, and maintain secure AI systems, addressing risks such as data poisoning, model theft, and prompt injection.",
+                        officialSource: "https://cloud.google.com/security/ai"
+                      }
+                    ],
+                    concepts: [],
+                    examFocus: "Understand the importance of security and the role of SAIF. Exam tests awareness of AI-specific risks and mitigation strategies.",
+                    traps: [],
+                    officialDocs: [
+                      { title: "Secure AI Framework (SAIF)", url: "https://cloud.google.com/security/ai" }
+                    ]
+                  },
+                  {
+                    id: "vertex-search-grounding",
+                    title: "Vertex Search & Grounding",
+                    studyQA: [
+                      {
+                        question: "What is Retrieval-Augmented Generation (RAG) and what problem does it solve?",
+                        answer: "Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with generative models to provide up-to-date, contextually relevant answers by incorporating external data sources at inference time. It solves the problem of outdated or incomplete model knowledge.",
+                        officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview"
+                      },
+                      {
+                        question: "What is Vertex AI Search and what is it used for?",
+                        answer: "Vertex AI Search is a Google Cloud service that enables enterprise search across structured and unstructured data, supporting use cases like knowledge management, customer support, and grounding GenAI responses in enterprise data.",
+                        officialSource: "https://cloud.google.com/vertex-ai/docs/search/overview"
+                      },
+                      {
+                        question: "What does 'grounding' mean in a GenAI context?",
+                        answer: "In GenAI, 'grounding' means connecting model responses to authoritative, real-world data sources to improve accuracy, reliability, and trustworthiness of generated outputs.",
+                        officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview"
+                      },
+                      {
+                        question: "Why does using Google Search and Google Maps for grounding improve answer reliability?",
+                        answer: "Using Google Search and Maps for grounding allows GenAI models to reference up-to-date, authoritative information, reducing hallucinations and increasing the factual accuracy of responses.",
+                        officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview"
+                      },
+                      {
+                        question: "How does Vertex AI Search support enterprise grounding?",
+                        answer: "Vertex AI Search enables enterprise grounding by integrating with internal data sources, allowing GenAI models to cite and use company-specific knowledge for more accurate and relevant responses.",
+                        officialSource: "https://cloud.google.com/vertex-ai/docs/search/overview"
+                      }
+                    ],
+                    concepts: [],
+                    examFocus: "Know when to use RAG, grounding, and Vertex AI Search. Exam tests ability to select the right approach for data freshness and reliability.",
+                    traps: [],
+                    officialDocs: [
+                      { title: "Grounding overview", url: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview" },
+                      { title: "Vertex AI Search overview", url: "https://cloud.google.com/vertex-ai/docs/search/overview" }
+                    ]
+                  },
+            {
+              id: "hardware-compute",
+              title: "Hardware & Compute",
+              studyQA: [
+                {
+                  question: "What are TPUs and what workloads are they optimized for?",
+                  answer: "TPUs (Tensor Processing Units) are custom accelerators developed by Google for high-performance machine learning workloads, especially deep learning and large-scale training and inference. They are optimized for tensor operations and are widely used for training and serving large models.",
+                  officialSource: "https://cloud.google.com/tpu/docs/tpus"
+                },
+                {
+                  question: "What are iGPUs and how do they differ from dedicated GPUs?",
+                  answer: "iGPUs (integrated GPUs) are graphics processors built into the CPU, sharing memory with the main processor. Dedicated GPUs are separate hardware components with their own memory, offering significantly higher performance for AI and ML workloads.",
+                  officialSource: "https://cloud.google.com/vertex-ai/docs/general/ml-use-cases"
+                },
+                {
+                  question: "Why are GPUs fundamental for training AI models?",
+                  answer: "GPUs (Graphics Processing Units) are fundamental for AI model training because they can perform parallel computations on large datasets, accelerating the training of deep learning models compared to CPUs.",
+                  officialSource: "https://cloud.google.com/vertex-ai/docs/general/ml-use-cases"
+                },
+                {
+                  question: "What is CUDA and what role does it play in using GPUs?",
+                  answer: "CUDA is a parallel computing platform and API developed by NVIDIA that allows developers to use NVIDIA GPUs for general purpose processing, including machine learning and deep learning workloads.",
+                  officialSource: "https://developer.nvidia.com/cuda-zone"
+                }
+              ],
+              concepts: [],
+              examFocus: "Understand the differences and use cases for each hardware type. Exam tests when to use TPUs, GPUs, or CPUs for different ML workloads.",
+              traps: [],
+              officialDocs: [
+                { title: "TPU documentation", url: "https://cloud.google.com/tpu/docs/tpus" },
+                { title: "Vertex AI ML use cases", url: "https://cloud.google.com/vertex-ai/docs/general/ml-use-cases" }
+              ]
+            },
+            {
+              id: "training-data",
+              title: "Training & Data",
+              studyQA: [
+                {
+                  question: "What is data labeling and why is it important in supervised learning?",
+                  answer: "Data labeling is the process of annotating data with meaningful tags or labels, which is essential for supervised learning as it enables models to learn the relationship between input data and the correct output.",
+                  officialSource: "https://cloud.google.com/vertex-ai/data-labeling/docs/overview"
+                },
+                {
+                  question: "What is fine-tuning of an LLM and when is it necessary?",
+                  answer: "Fine-tuning is the process of further training a pre-trained LLM on a specific dataset to adapt it to a particular task or domain. It is necessary when the base model does not perform adequately on specialized tasks or data.",
+                  officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/models/tune-models"
+                },
+                {
+                  question: "What is unstructured data?",
+                  answer: "Unstructured data refers to information that does not have a predefined data model or organization, such as text, images, audio, and video. GenAI models are particularly effective at processing unstructured data.",
+                  officialSource: "https://cloud.google.com/vertex-ai/docs/featurestore/overview"
+                },
+                {
+                  question: "What are semi-structured data?",
+                  answer: "Semi-structured data have some organizational properties but do not conform to a rigid structure, such as JSON, XML, or log files. They are more flexible than structured data but easier to process than unstructured data.",
+                  officialSource: "https://cloud.google.com/vertex-ai/docs/featurestore/overview"
+                },
+                {
+                  question: "What is structured data and where is it typically used?",
+                  answer: "Structured data is highly organized and formatted in a way that is easily searchable, such as in relational databases and spreadsheets. It is typically used in traditional analytics and business intelligence applications.",
+                  officialSource: "https://cloud.google.com/vertex-ai/docs/featurestore/overview"
+                }
+              ],
+              concepts: [],
+              examFocus: "Know the differences between data types and when to use each. Exam tests data preparation and selection for ML projects.",
+              traps: [],
+              officialDocs: [
+                { title: "Data labeling overview", url: "https://cloud.google.com/vertex-ai/data-labeling/docs/overview" },
+                { title: "Feature Store overview", url: "https://cloud.google.com/vertex-ai/docs/featurestore/overview" }
+              ]
+            },
+      {
         id: "vertex-ai-overview",
         title: "Vertex AI Platform",
         concepts: [
@@ -298,6 +742,37 @@ export const EXAM_SECTIONS = [
     description: "Fine-tuning, RAG, prompt engineering, and optimization",
     topics: [
       {
+        id: "overview",
+        title: "Overview",
+        studyQA: [
+          {
+            question: "What is prompt tuning and how does it differ from fine-tuning?",
+            answer: "Prompt tuning involves optimizing the input prompts to guide the model's output, while fine-tuning adjusts the model's internal parameters using additional training data. Prompt tuning is less resource-intensive and does not require retraining the model.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          },
+          {
+            question: "What is zero-shot prompting?",
+            answer: "Zero-shot prompting is a technique where the model is given a task without any example. It is suitable for simple tasks where the model can generalize from its pre-training.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          },
+          {
+            question: "What is few-shot prompting and when is it preferable?",
+            answer: "Few-shot prompting involves providing the model with a few examples to guide its output. It is preferable when you need consistent formatting or when the task is ambiguous without context.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          },
+          {
+            question: "What is chaining and why is it useful in complex workflows?",
+            answer: "Chaining refers to the sequential use of multiple prompts, where the output of one prompt becomes the input for the next. This is useful for decomposing complex tasks into manageable steps.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          },
+          {
+            question: "What is Chain of Thought prompting and when should it be used?",
+            answer: "Chain of Thought prompting encourages the model to reason step-by-step, making it suitable for tasks that require logical reasoning or multi-step problem solving.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies"
+          }
+        ]
+      },
+      {
         id: "fine-tuning-approaches",
         title: "Fine-tuning Approaches",
         concepts: [
@@ -365,7 +840,7 @@ export const EXAM_SECTIONS = [
             url: "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini",
           },
         ],
-      },
+      }
     ],
   },
   {
@@ -374,6 +849,32 @@ export const EXAM_SECTIONS = [
     weight: 15,
     description: "ROI, governance, responsible AI, and organizational adoption",
     topics: [
+      {
+        id: "overview",
+        title: "Overview",
+        studyQA: [
+          {
+            question: "What is the role of Responsible AI in business decisions?",
+            answer: "Responsible AI ensures that AI systems are fair, transparent, safe, and accountable, which is critical for building trust, meeting regulatory requirements, and making ethical business decisions.",
+            officialSource: "https://cloud.google.com/responsible-ai"
+          },
+          {
+            question: "What is Human-in-the-Loop (HITL) and when is it essential?",
+            answer: "Human-in-the-Loop (HITL) refers to incorporating human oversight and intervention in AI systems, which is essential for high-stakes decisions, content moderation, and applications where quality and safety are critical.",
+            officialSource: "https://cloud.google.com/responsible-ai"
+          },
+          {
+            question: "What is the importance of data quality in GenAI projects?",
+            answer: "Data quality directly impacts the performance and reliability of GenAI models. High-quality, well-governed data ensures accurate, fair, and robust AI outputs.",
+            officialSource: "https://cloud.google.com/vertex-ai/docs/featurestore/overview"
+          },
+          {
+            question: "What are the main cost and performance tradeoffs in GenAI solutions?",
+            answer: "Cost and performance tradeoffs involve balancing model size, latency, and token pricing. Smaller models and batch processing reduce costs, while larger models and real-time processing increase performance but may be more expensive.",
+            officialSource: "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+          }
+        ]
+      },
       {
         id: "responsible-ai",
         title: "Responsible AI Principles",
@@ -451,7 +952,7 @@ export const EXAM_SECTIONS = [
           "Forgetting about data privacy requirements",
         ],
         officialDocs: [{ title: "Vertex AI Feature Store", url: "https://cloud.google.com/vertex-ai/docs/featurestore/overview" }],
-      },
+      }
     ],
   },
 ]

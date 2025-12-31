@@ -58,7 +58,7 @@ export default async function SectionPage({ params }: Props) {
                   </div>
                   <span className="text-muted-foreground">→</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1 ml-6">{topic.concepts.length} concepts</p>
+                <p className="text-sm text-muted-foreground mt-1 ml-6">{Array.isArray(topic.concepts) ? topic.concepts.length : 0} concepts</p>
               </Link>
             ))}
           </div>
