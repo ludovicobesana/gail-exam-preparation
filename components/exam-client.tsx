@@ -34,8 +34,23 @@ export function ExamClient({ questions, sections }: Props) {
       selectedQuestions.push(...shuffled.slice(0, targetCount))
     })
 
-    // Shuffle final list
-    return selectedQuestions.sort(() => Math.random() - 0.5)
+    // Deduplicate by id
+    let uniqueQuestions = Array.from(
+      new Map(selectedQuestions.map(q => [q.id, q])).values()
+    )
+
+    // Se non bastano, aggiungi altre domande random uniche fino a 50
+    if (uniqueQuestions.length < TARGET_QUESTIONS) {
+      const usedIds = new Set(uniqueQuestions.map(q => q.id))
+      const remaining = questions.filter(q => !usedIds.has(q.id))
+      const shuffled = [...remaining].sort(() => Math.random() - 0.5)
+      uniqueQuestions = uniqueQuestions.concat(shuffled.slice(0, TARGET_QUESTIONS - uniqueQuestions.length))
+    }
+
+    // Shuffle final list and ensure exactly TARGET_QUESTIONS questions
+    return uniqueQuestions
+      .sort(() => Math.random() - 0.5)
+      .slice(0, TARGET_QUESTIONS)
   }, [questions, sections])
 
   // Timer

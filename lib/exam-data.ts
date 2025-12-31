@@ -1762,6 +1762,1662 @@ export const PRACTICE_QUESTIONS: Question[] = [
     officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/models/evaluate-models",
     difficulty: "medium",
   },
+    {
+    id: "q59",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "A data analyst at a logistics company is reviewing time-series GPS and engine sensor data collected from a fleet of delivery trucks. No labels are available, but the analyst wants to detect patterns, unusual behavior, and natural groupings in the data. What type of machine learning is most appropriate?",
+    options: [
+      "Unsupervised learning",
+      "Computer vision modeling",
+      "Reinforcement learning",
+      "Semi-supervised learning"
+    ],
+    correctIndex: 0,
+    explanation:
+      "Unsupervised learning is used when the dataset lacks labels and the goal is to discover hidden patterns, groupings, or anomalies. In this case, clustering or anomaly detection techniques can help identify unusual truck behavior or route performance without requiring pre-labeled data.",
+    whyOthersWrong: [
+      "Computer vision focuses on image data, not time-series sensor data.",
+      "Reinforcement learning is based on actions and rewards, and isn't suitable for static pattern detection.",
+      "Semi-supervised learning requires at least some labeled data, which is not available here.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "easy",
+  },
+  {
+    id: "q60",
+    sectionId: "google-cloud-offerings",
+    topicId: "agents-applications",
+    question:
+      "A biomedical lab wants to reduce the manual effort spent reviewing clinical trial documents by enabling researchers to ask natural language questions and receive summarized answers. The solution should require minimal coding. What should the team use?",
+    options: [
+      "Use Vertex AI Agent Builder to create a custom AI agent.",
+      "Use Cloud Vision API to extract images and diagrams from the research files.",
+      "Use Gemini for Workspace to enable AI-powered document editing and suggestions.",
+      "Use BigQuery ML to generate summaries based on word frequency patterns."
+    ],
+    correctIndex: 0,
+    explanation:
+      "Vertex AI Agent Builder enables teams to create conversational agents that can access, understand, and summarize enterprise data—such as research papers—using natural language. It's designed for low-code development and is well-suited for R&D environments.",
+    whyOthersWrong: [
+      "Cloud Vision API extracts visual content, not textual summaries or answers.",
+      "Gemini for Workspace enhances productivity tools like Docs and Sheets, but doesn't enable custom agent creation or document querying.",
+      "BigQuery ML can analyze patterns but does not generate conversational summaries or support agent workflows.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q61",
+    sectionId: "business-strategies",
+    topicId: "data-quality",
+    question:
+      "A retail company's data engineer is building a generative-AI pipeline to analyze thousands of free-form customer emails and social media posts about recent product launches. The messages vary widely in length, tone, and structure. Which best classifies the message content?",
+    options: [
+      "Structured data",
+      "Semi-structured data",
+      "Unstructured data",
+      "Time-series data"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Free-form natural-language text doesn't follow a fixed schema: sentences vary in length, grammar, tone, and layout. Even if platform APIs add metadata (timestamps, usernames), the message body itself remains unstructured.",
+    whyOthersWrong: [
+      "Structured data fits neatly into predefined fields (e.g., a table with columns like region, age, rating). The messages described are not in a consistent, columnar format.",
+      "Semi-structured data (e.g., JSON, XML, logs) has consistent keys/tags but flexible values. While a social post may arrive in a JSON envelope, the content you're analyzing (free-text) is still unstructured.",
+      "Time-series focuses on measurements indexed by time at regular intervals (prices, sensor readings). Although messages have timestamps, their primary nature is textual content, not time-indexed measurements.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q62",
+    sectionId: "google-cloud-offerings",
+    topicId: "security-services",
+    question:
+      "A data science team is deploying multiple gen AI solutions and needs a central tool to monitor vulnerabilities, misconfigurations, and threats across their cloud environment. What should they use?",
+    options: [
+      "Cloud Asset Inventory",
+      "Identity-Aware Proxy",
+      "Cloud Logging",
+      "Security Command Center"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Security Command Center offers a unified view of security risks, vulnerabilities, and threats across Google Cloud resources, including AI workloads. It helps ensure secure deployment and monitoring of generative AI models at scale.",
+    whyOthersWrong: [
+      "Cloud Asset Inventory helps track resources, not monitor security posture.",
+      "Identity-Aware Proxy controls access, not overall cloud security visibility.",
+      "Cloud Logging collects logs but does not provide centralized threat visibility.",
+    ],
+    officialDoc: "https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview",
+    difficulty: "easy",
+  },
+  {
+    id: "q63",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A financial services company is building an AI assistant to help analysts answer client questions. It must only respond using the company's internal policy documents. What should the company implement?",
+    options: [
+      "Use few-shot prompting.",
+      "Adjust the top-p parameter.",
+      "Ground the model using their internal documents.",
+      "Fine-tune with external datasets."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Grounding ensures the model only pulls information from the company's internal sources, avoiding hallucinations and maintaining accuracy. This is key for compliance-sensitive industries like finance.",
+    whyOthersWrong: [
+      "Few-shot prompting helps with formatting, not content control.",
+      "Top-p controls randomness, not data source.",
+      "Fine-tuning on external data increases risk of untrusted output.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q64",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "A machine learning engineer is explaining the role of generative AI in a company meeting. She states that gen AI models are designed to create new outputs—such as text, images, or code—based on learned data patterns. What accurately describes a generative AI model?",
+    options: [
+      "A browser-based tool that lets users prompt and query an AI system",
+      "A compliance checklist for validating ethical use of generative technologies",
+      "A complex algorithm trained on vast amounts of data to learn patterns and relationships",
+      "A hardware system designed to accelerate inference workloads for neural networks"
+    ],
+    correctIndex: 2,
+    explanation:
+      "A generative AI model is a type of machine learning model trained on large datasets to learn the underlying patterns in data and generate new, original outputs. It can create human-like content such as natural language, images, audio, and more using these learned representations.",
+    whyOthersWrong: [
+      "A browser-based tool is an interface to interact with gen AI but does not define what the model is.",
+      "A compliance checklist addresses governance and responsible use but is not the definition of the model itself.",
+      "While hardware accelerates model operations, it is not the model and does not describe the algorithmic nature of generative AI.",
+    ],
+    officialDoc: "https://cloud.google.com/ai/generative-ai",
+    difficulty: "easy",
+  },
+  {
+    id: "q65",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "A data scientist at a hospital is deploying a gen AI model to help radiologists identify anomalies in imaging results. To ensure the solution aligns with responsible AI principles and earns clinician trust, which consideration is most essential?",
+    options: [
+      "Allowing the model to override clinician judgment for faster decisions",
+      "Optimizing the model only for novel and creative diagnoses",
+      "Ensuring the system provides explanations for its recommendations",
+      "Avoiding visibility into the model's internal logic to simplify compliance"
+    ],
+    correctIndex: 2,
+    explanation:
+      "In high-stakes fields like healthcare, explainability helps professionals understand and trust AI outputs. Transparent insights into how the model arrived at its suggestions are vital for ethical use, informed decision-making, and regulatory compliance.",
+    whyOthersWrong: [
+      "Removing human oversight can jeopardize patient safety and violates key principles of responsible AI.",
+      "While creativity has value in some applications, medical AI systems must prioritize accuracy, consistency, and traceability over novelty.",
+      "Hiding model logic limits accountability and contradicts industry best practices and regulations.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "medium",
+  },
+  {
+    id: "q66",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "An AI product manager at a logistics firm is exploring the use of large language models (LLMs) to improve customer communication and automate responses to shipment queries. What is a core capability that makes LLMs suitable for this task?",
+    options: [
+      "LLMs are trained on vast datasets, enabling broad language and context understanding, and adaptability across many tasks.",
+      "LLMs rely on small, curated datasets for better precision in domain-specific scenarios.",
+      "LLMs specialize in scientific and mathematical problem solving without needing real-world examples.",
+      "LLMs automatically self-optimize their outputs over time without fine-tuning or intervention."
+    ],
+    correctIndex: 0,
+    explanation:
+      "LLMs are designed to generalize across a wide range of inputs by learning from massive and diverse datasets. This gives them the ability to understand nuanced language, follow context across turns, and perform well on a variety of tasks without domain-specific fine-tuning.",
+    whyOthersWrong: [
+      "Small, curated datasets are useful for fine-tuning, but LLMs need broad pretraining to generalize.",
+      "While LLMs can support reasoning, they do not inherently specialize in technical or mathematical problem solving.",
+      "LLMs do not self-optimize; they require explicit retraining or prompting strategies to improve behavior.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview",
+    difficulty: "easy",
+  },
+  {
+    id: "q67",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "A data scientist at a retail analytics firm wants to uncover meaningful groupings in customer behavior without using predefined labels. The goal is to understand how different types of customers interact with the store across various regions and products. What type of machine learning approach best fits this scenario?",
+    options: [
+      "Predicting which users are likely to return items using past return data",
+      "Analyzing transaction clusters to find natural segments in customer behavior",
+      "Training a sentiment model using labeled product review scores",
+      "Generating next-quarter revenue forecasts using past performance and ad spend"
+    ],
+    correctIndex: 1,
+    explanation:
+      "This is an example of unsupervised learning, where the system detects patterns and groups (clusters) in data without needing labeled outcomes. It is commonly used for customer segmentation, anomaly detection, and market basket analysis.",
+    whyOthersWrong: [
+      "Predicting return behavior based on past data is a classic supervised learning task, requiring labeled input-output pairs.",
+      "Training a model on labeled review scores is supervised learning, which uses predefined categories to guide prediction.",
+      "Revenue forecasting uses historical labeled data to predict future values, which falls under supervised regression models.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q68",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A data scientist at a publishing company is using an LLM to answer customer inquiries about newly released books. However, the model returns outdated information due to its training cutoff. What should the team implement to fix this issue?",
+    options: [
+      "RAG applies auto-labeling to newly published content for classification.",
+      "RAG reduces token usage by compressing historical data into prompt templates.",
+      "RAG enables the LLM to retrieve relevant and up-to-date information from knowledge sources.",
+      "RAG uses feedback loops to continuously adjust the model's creativity settings."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Retrieval-augmented generation (RAG) solves the knowledge cutoff limitation by retrieving recent, external documents at inference time. This allows the model to generate responses based on current, verified content instead of outdated internal knowledge.",
+    whyOthersWrong: [
+      "Auto-labeling helps with classification tasks but doesn't inject live data into generation.",
+      "Reducing token count may improve efficiency but doesn't solve accuracy issues caused by outdated knowledge.",
+      "Creativity settings like temperature do not influence factual grounding or data freshness.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q69",
+    sectionId: "google-cloud-offerings",
+    topicId: "agents-applications",
+    question:
+      "A customer support engineer is deploying tools to help live agents respond more efficiently during active support calls. The goal is to surface real-time suggestions based on conversation context. Which Google Cloud solution should be used?",
+    options: [
+      "Contact Center AI provides omnichannel routing and CRM integration for automated support.",
+      "Conversation Insights generates post-call summaries and team-wide customer sentiment trends.",
+      "Agent Assist provides real-time assistance and recommended replies during live customer conversations.",
+      "Dialogflow CX is used to design and deploy virtual chatbots for self-service support."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Agent Assist enhances live customer-agent interactions by delivering AI-generated suggestions, knowledge articles, and recommended responses in real time, improving efficiency and customer experience.",
+    whyOthersWrong: [
+      "Contact Center AI includes infrastructure and routing but does not offer real-time agent guidance.",
+      "Conversation Insights focuses on analytics and summaries after interactions, not real-time help.",
+      "Dialogflow CX supports virtual agent development but is not designed to assist live agents directly.",
+    ],
+    officialDoc: "https://cloud.google.com/solutions/contact-center",
+    difficulty: "medium",
+  },
+  {
+    id: "q70",
+    sectionId: "fundamentals",
+    topicId: "agents-applications",
+    question:
+      "A game development studio wants to help its engineers accelerate feature implementation by generating Unity or C# scripts from plain English descriptions. The AI assistant should also suggest improvements, detect bugs, and refactor code as needed. What type of agent should they use?",
+    options: [
+      "Workflow automation agent",
+      "Language translation agent",
+      "Data ingestion agent",
+      "Code agent"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Code agents are specialized generative AI agents designed to assist with writing, reviewing, debugging, and transforming natural language into source code. They improve developer productivity by automating coding tasks and ensuring consistency.",
+    whyOthersWrong: [
+      "Workflow automation agents handle process coordination or repetitive task execution rather than assisting with software development tasks.",
+      "Language translation agents are used to convert content between human languages, not programming languages or development workflows.",
+      "Data ingestion agents focus on collecting, formatting, and preparing data—not working with or generating code.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "easy",
+  },
+  {
+    id: "q71",
+    sectionId: "improve-output",
+    topicId: "prompting-techniques",
+    question:
+      "A retail company wants to ensure its generative AI assistant consistently communicates in the company's brand voice. Which technique would best help enforce alignment with the company's tone and communication style?",
+    options: [
+      "Switching to an open-source LLM with no prebuilt personality",
+      "Embedding product catalog data into the model weights",
+      "Increasing the top-k sampling value during generation",
+      "Role prompting"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Role prompting guides the model to adopt a specific persona or communication style by explicitly instructing it to respond as a defined role (e.g., a brand representative). This technique helps align output tone and behavior with the company's voice.",
+    whyOthersWrong: [
+      "Switching models without guidance on prompt strategy won't ensure consistency in tone or compliance with brand standards.",
+      "Embedding product data may improve factual accuracy but does not affect tone or voice alignment.",
+      "Increasing top-k expands the randomness of responses, which risks inconsistency rather than enforcing brand alignment.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies",
+    difficulty: "medium",
+  },
+  {
+    id: "q72",
+    sectionId: "google-cloud-offerings",
+    topicId: "gemini-vs-gemma",
+    question:
+      "A marketing engineer at a digital agency is tasked with generating custom promotional videos based on input briefs that include customer segments, value props, and campaign goals. The team wants an AI model that can generate high-quality videos that align with each brief. Which model should they use?",
+    options: [
+      "Imagen",
+      "Gemma",
+      "Gemini",
+      "Veo"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Veo is Google's video generation foundation model that creates high-quality, dynamic video content from text and other multimodal inputs. It supports customized and engaging video generation suitable for marketing, storytelling, and sales purposes.",
+    whyOthersWrong: [
+      "Imagen is designed for generating photorealistic images from text but does not support full video generation.",
+      "Gemma is an open model family designed for lightweight and fine-tuned text generation tasks, not multimedia or video output.",
+      "Gemini is a multimodal model suited for text, image, code, and audio tasks, but not optimized for video generation.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/video/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q73",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A machine learning engineer at a healthcare startup notices that different teams are independently training models, storing datasets in separate environments, and using inconsistent evaluation methods. The organization wants a unified platform to streamline model development, training, deployment, and monitoring. What should they adopt?",
+    options: [
+      "Cloud Run",
+      "Gemini in Google Sheets",
+      "Vertex AI",
+      "Google Cloud Pub/Sub"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Vertex AI offers a comprehensive platform to unify the AI lifecycle—including training, tuning, deploying, and monitoring ML models. It reduces redundancy, promotes collaboration across teams, and supports both custom and foundation models with scalable MLOps capabilities.",
+    whyOthersWrong: [
+      "Cloud Run is for deploying containerized applications but does not manage the full AI/ML workflow.",
+      "Gemini in Google Sheets provides assistance within spreadsheets but isn't suitable for managing enterprise AI pipelines.",
+      "Pub/Sub is a messaging service that supports event-driven architecture but doesn't support end-to-end AI model development and deployment.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "easy",
+  },
+  {
+    id: "q74",
+    sectionId: "improve-output",
+    topicId: "sampling-parameters",
+    question:
+      "A marketing analyst at a media company is configuring a generative AI tool to write promotional email content. They want the language to be creative and engaging without becoming incoherent or irrelevant. Which model sampling parameter should they focus on adjusting to best balance randomness and quality?",
+    options: [
+      "Token penalty",
+      "Stop sequence",
+      "Temperature",
+      "Model version"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Adjusting the temperature parameter directly influences the randomness of model outputs. A moderate temperature (e.g., 0.7) encourages diverse, imaginative responses while maintaining coherence, making it ideal for creative tasks like marketing copy.",
+    whyOthersWrong: [
+      "Token penalty is used to discourage repetition, not to balance creativity versus coherence.",
+      "Stop sequences define where the output should end but don't affect creativity or diversity of the response.",
+      "Choosing a different model version might affect performance or features, but it does not specifically tune output diversity or control creativity.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/adjust-parameter-values",
+    difficulty: "medium",
+  },
+  {
+    id: "q75",
+    sectionId: "fundamentals",
+    topicId: "model-limitations",
+    question:
+      "A data analyst at a fintech firm asks a generative AI assistant for the recent funding amount of a stealth-mode startup. The model replies with a specific figure and attributes it to a major financial outlet. After checking, the analyst realizes no such funding event or article exists. What does this behavior indicate about the model?",
+    options: [
+      "Hallucinations",
+      "Low context awareness",
+      "Outdated training data",
+      "Training bias"
+    ],
+    correctIndex: 0,
+    explanation:
+      "Hallucinations occur when a generative AI model fabricates plausible-sounding but false or unverifiable information. This is a known limitation of LLMs, especially when answering confidently about topics not grounded in its training data or external sources.",
+    whyOthersWrong: [
+      "Low context awareness would lead to vague or irrelevant answers, not confidently false ones.",
+      "Outdated training data refers to the knowledge cutoff issue, but this scenario is about invented information rather than missing it.",
+      "Training bias refers to systematic skew or prejudice in the model's output, not the generation of false facts.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "medium",
+  },
+  {
+    id: "q76",
+    sectionId: "fundamentals",
+    topicId: "agents-applications",
+    question:
+      "An education-focused startup hires an AI engineer to build an intelligent tutoring system that can evaluate learners' understanding, deliver adaptive exercises, guide lesson progression, and monitor performance analytics. Which type of AI solution is most appropriate to power this experience?",
+    options: [
+      "Customized learning agent",
+      "Basic rule-based chatbot embedded in a learning portal",
+      "Large-scale text summarization model",
+      "Pretrained model used for generalized content classification"
+    ],
+    correctIndex: 0,
+    explanation:
+      "A customized learning agent integrates multiple capabilities—such as knowledge assessment, lesson sequencing, personalized recommendations, and real-time feedback—making it ideal for adaptive, AI-powered education platforms. These agents are tailored to respond dynamically based on user interaction and performance.",
+    whyOthersWrong: [
+      "Rule-based chatbots provide limited functionality and do not support deep personalization or autonomous lesson delivery.",
+      "While summarization models are useful for condensing text, they lack the interactive, adaptive logic needed for personalized instruction and tracking.",
+      "A generalized content classification model can label content, but it cannot drive the end-to-end learning flow or assess student progress effectively.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q77",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "A retail enterprise is building an AI-powered virtual assistant that supports product troubleshooting and complex account inquiries for both new and returning customers. The assistant must remember prior parts of the conversation to provide accurate and coherent responses. Which capability should the development team prioritize when selecting a foundation model?",
+    options: [
+      "The model's ability to synthesize tabular data",
+      "The model's compatibility with image captioning tasks",
+      "The model's context window size",
+      "The model's licensing terms for commercial resale"
+    ],
+    correctIndex: 2,
+    explanation:
+      "A model's context window size determines how much information it can retain and reason over in a single interaction. For complex and multi-turn conversations like customer support, a larger context window enables the model to track prior queries and responses for more coherent dialogue.",
+    whyOthersWrong: [
+      "Tabular data synthesis is more relevant to analytics and structured data processing, not chatbot comprehension.",
+      "Image captioning is useful for vision-related applications, not text-based customer service interactions.",
+      "Licensing terms affect usage rights but are not a functional capability tied to a chatbot's ability to understand customer queries.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q78",
+    sectionId: "improve-output",
+    topicId: "prompting-techniques",
+    question:
+      "A banking app team is building a virtual assistant that helps users manage transactions and view account history. The assistant must reference earlier parts of the conversation to respond accurately. What prompting technique should the team apply?",
+    options: [
+      "Use temperature tuning to keep responses more balanced and consistent.",
+      "Use keyword tagging to match user intents with static templates.",
+      "Use zero-shot prompting to minimize training data needs.",
+      "Use prompt chaining to maintain and pass context between turns."
+    ],
+    correctIndex: 3,
+    explanation:
+      "Prompt chaining links multiple prompts together, allowing the model to retain context from previous interactions. This technique is essential in scenarios like banking or customer support where earlier conversation history must influence later responses.",
+    whyOthersWrong: [
+      "Temperature tuning adjusts randomness, not conversational memory.",
+      "Keyword tagging helps with intent recognition but does not maintain dialogue continuity.",
+      "Zero-shot prompting gives quick answers without prior examples but doesn't preserve context.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies",
+    difficulty: "medium",
+  },
+  {
+    id: "q79",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "A data analyst at a logistics company is rolling out a generative AI tool that automatically recommends delivery routes based on historical performance and real-time factors. To maintain user trust in the AI's decisions, which responsible AI principle should be prioritized?",
+    options: [
+      "Reducing processing time by omitting context for each recommendation",
+      "Hiding decision logic to protect internal algorithms from users",
+      "Providing transparency and explainability about how decisions are made",
+      "Collecting excess route data to improve model creativity"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Transparency and explainability are critical for building trust in automated systems, especially when they influence real-world operations. By helping users understand how decisions are made, organizations can ensure accountability and foster confidence in AI outputs.",
+    whyOthersWrong: [
+      "Prioritizing speed at the expense of clarity can erode trust and introduce operational risk.",
+      "Hiding decision logic contradicts responsible AI principles and limits user oversight.",
+      "Gathering excessive or irrelevant data can raise privacy concerns and doesn't inherently improve user trust or model output quality.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "medium",
+  },
+  {
+    id: "q80",
+    sectionId: "google-cloud-offerings",
+    topicId: "gemini-vs-gemma",
+    question:
+      "A product designer at a consumer electronics company needs to generate realistic marketing images of new concept devices before they are physically manufactured. The visuals must be photorealistic and generated directly from product descriptions. What foundation model should be used?",
+    options: [
+      "Gemma",
+      "Chirp",
+      "Imagen",
+      "Gemini"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Imagen is Google's foundation model for high-quality text-to-image generation. It is optimized for producing photorealistic visuals from detailed descriptions, making it ideal for industries like design, advertising, and media where visual content needs to be produced at scale and low cost.",
+    whyOthersWrong: [
+      "Gemma is a lightweight open-source LLM used for text generation, not image creation.",
+      "Chirp is designed for speech-to-text and audio processing tasks.",
+      "Gemini is a multimodal foundation model but is not specialized for generating photorealistic images.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview",
+    difficulty: "easy",
+  },
+  {
+    id: "q81",
+    sectionId: "google-cloud-offerings",
+    topicId: "gemini-vs-gemma",
+    question:
+      "A freelance AI engineer is building a multilingual chatbot on a personal laptop and needs a high-performance open-source model that can be fine-tuned locally. The solution must offer strong language understanding while being lightweight enough for limited compute environments. Which model family should they use?",
+    options: [
+      "Gemini",
+      "Imagen",
+      "Gemma",
+      "Chirp"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Gemma is Google's open-source LLM family designed for local fine-tuning and deployment. It is lightweight, optimized for performance on limited hardware, and ideal for developers or researchers building prototypes without needing large cloud resources.",
+    whyOthersWrong: [
+      "Gemini is a powerful, multimodal foundation model but is not open-source or lightweight for local development.",
+      "Imagen is for text-to-image generation, not natural language understanding or chatbot development.",
+      "Chirp is related to speech-to-text tasks, not language generation or chatbot use cases.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/open-models/use-gemma",
+    difficulty: "easy",
+  },
+  {
+    id: "q82",
+    sectionId: "fundamentals",
+    topicId: "agents-applications",
+    question:
+      "A financial services firm is developing a generative AI agent to handle regulatory reporting. The agent must access internal systems, analyze data, and take action based on compliance rules. What is the core function of an AI agent in this system?",
+    options: [
+      "To host and scale foundation models for faster data processing.",
+      "To act as a data lake for storing structured and unstructured business information.",
+      "To serve as a conversational interface between users and the AI model.",
+      "To be a smart system that can analyze, use tools, and make decisions to reach goals."
+    ],
+    correctIndex: 3,
+    explanation:
+      "In generative AI systems, agents are autonomous entities that combine reasoning, planning, and tool use to carry out tasks toward specific goals. They can interact with external tools and systems, making them ideal for automating complex workflows like compliance checks.",
+    whyOthersWrong: [
+      "Model hosting is a function of infrastructure, not agents.",
+      "Data lakes store information but do not include intelligence or decision-making.",
+      "A conversational interface allows interaction but lacks autonomous decision-making.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q83",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "A healthcare startup is deploying a generative AI tool to assist clinicians by summarizing patient records and suggesting follow-up actions. To support responsible AI use, what should the team prioritize to ensure accountability in decision-making?",
+    options: [
+      "Ensure the model's internal logic remains confidential to prevent user influence",
+      "Implement explainability features that help users understand how the system reaches its conclusions",
+      "Allow the model to generate suggestions autonomously without requiring human validation",
+      "Focus exclusively on generating innovative summaries, regardless of factual accuracy"
+    ],
+    correctIndex: 1,
+    explanation:
+      "Explainability is a key pillar of responsible AI and accountability. It allows users—especially in regulated domains like healthcare—to understand the reasoning behind AI outputs, enabling better trust, oversight, and informed decision-making.",
+    whyOthersWrong: [
+      "Opaqueness in AI decision-making undermines trust and fails to meet accountability or transparency standards.",
+      "Full automation without human oversight can lead to unsafe or unaccountable outcomes, especially in sensitive fields.",
+      "Prioritizing creativity without ensuring factual correctness is risky and irresponsible in use cases involving real-world consequences.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "medium",
+  },
+  {
+    id: "q84",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A data engineer at a transportation company wants employees to easily access insights spread across dispatch logs, maintenance reports, and customer feedback tools. Currently, staff must manually check each system, slowing response times. What should the engineer implement to unify data access across platforms using gen AI?",
+    options: [
+      "Google Cloud Vision",
+      "Gemini Code Assist",
+      "Gemini for Google Workspace",
+      "Vertex AI Search"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Vertex AI Search enables organizations to connect and index multiple internal data sources and use generative AI to deliver relevant, context-aware search results across systems. It improves operational efficiency by offering a central access point for structured and unstructured information.",
+    whyOthersWrong: [
+      "Google Cloud Vision is used for image analysis and doesn't facilitate cross-system text-based data access.",
+      "Gemini Code Assist is intended for code generation and developer support, not enterprise search integration.",
+      "Gemini for Google Workspace improves productivity within Google apps but isn't designed to unify custom enterprise systems.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/search/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q85",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A support administrator at a telecom provider is tasked with improving customer service operations across live chat, email, and voice channels. The company wants to modernize its contact center using AI to ensure secure, seamless, and scalable interactions across all support methods. What Google Cloud offering should they use?",
+    options: [
+      "Vertex AI Platform",
+      "Dialogflow CX",
+      "Google Cloud Contact Center as a Service",
+      "BigQuery Studio"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Google Cloud Contact Center AI (CCAI) offers a unified solution that integrates multiple communication channels with generative AI-powered automation. It enables secure, scalable, and consistent customer support while reducing operational overhead.",
+    whyOthersWrong: [
+      "Vertex AI Platform is focused on the full ML lifecycle but is not designed for contact center operations or communication integration.",
+      "Dialogflow CX powers conversational interfaces but doesn't offer full contact center capabilities like telephony integration or omnichannel support.",
+      "BigQuery Studio is for data analytics and AI/ML development, not customer communication workflows.",
+    ],
+    officialDoc: "https://cloud.google.com/solutions/contact-center",
+    difficulty: "medium",
+  },
+  {
+    id: "q86",
+    sectionId: "business-strategies",
+    topicId: "cost-optimization",
+    question:
+      "An e-commerce data analyst proposes using multimodal search features—such as visual, voice, and text input—to help customers find products more easily. What is a primary business outcome of this strategy?",
+    options: [
+      "Improved customer engagement and product discovery leading to increased satisfaction and potential sales.",
+      "Reduced time spent by employees tagging product metadata for SEO optimization.",
+      "Enhanced backend integration between inventory systems and product catalogs.",
+      "Improved fraud detection and prevention for high-value product transactions."
+    ],
+    correctIndex: 0,
+    explanation:
+      "Multimodal search enhances how users interact with the catalog, making it easier to discover relevant products through intuitive inputs. This leads to better user experience, stronger engagement, and ultimately higher conversion and sales potential.",
+    whyOthersWrong: [
+      "While it may reduce reliance on keywords, multimodal search is not aimed at SEO tagging optimization.",
+      "Backend system integration is not directly improved by implementing multimodal search.",
+      "Fraud detection is unrelated to the user-facing search experience.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/search/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q87",
+    sectionId: "business-strategies",
+    topicId: "human-in-the-loop",
+    question:
+      "A media company is using generative AI to summarize customer reviews for its video streaming service. The summaries often miss subtle humor or exaggeration, leading to misrepresentation of the reviewer's tone. What should the team do to improve the accuracy of these summaries?",
+    options: [
+      "Apply few-shot prompting to shorten and simplify customer feedback.",
+      "Incorporate a human-in-the-loop (HITL) process to refine the model's output.",
+      "Lower the top-p value to reduce the randomness of the generated summaries.",
+      "Fine-tune the model on factual news articles for better summarization control."
+    ],
+    correctIndex: 1,
+    explanation:
+      "A human-in-the-loop process allows humans to review, adjust, or approve AI-generated summaries, especially when interpreting tone, sarcasm, or subjective content. This approach helps maintain content accuracy and prevent misunderstandings in emotionally or culturally nuanced situations.",
+    whyOthersWrong: [
+      "Few-shot prompting supports instruction clarity but doesn't correct misread tone.",
+      "Lowering the top-p value may reduce variability but won't help with tone interpretation.",
+      "Fine-tuning on factual news reduces generalization ability for subjective content like reviews.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "hard",
+  },
+  {
+    id: "q88",
+    sectionId: "google-cloud-offerings",
+    topicId: "grounding-rag",
+    question:
+      "A technical team at a legal firm wants to build a generative AI assistant that answers questions by referencing their internal legal documents, trusted third-party compliance sources, and Google's knowledge base. What does Vertex AI Search enable them to do?",
+    options: [
+      "Generate search rankings based on law firm popularity and public sentiment.",
+      "Ground LLM responses with first-party data, third-party data, and Google's knowledge graph.",
+      "Index global legal case data from public legal websites to compare precedents.",
+      "Surface summaries using global content trends across regulatory blogs and forums."
+    ],
+    correctIndex: 1,
+    explanation:
+      "Vertex AI Search enables grounding of generative AI output using enterprise documents (first-party), trusted partner sources (third-party), and Google's knowledge graph. This allows for accurate, context-aware answers using authoritative data.",
+    whyOthersWrong: [
+      "Vertex AI Search does not rank content by popularity or sentiment.",
+      "Indexing public legal websites is not a core function of Vertex AI Search.",
+      "Summaries generated by Vertex AI Search are grounded in configured sources, not global content trends.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/search/overview",
+    difficulty: "hard",
+  },
+  {
+    id: "q89",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A legal tech startup deploys a generative AI assistant to help law firms answer client questions about recent case rulings. The assistant is producing outdated or incomplete answers because it lacks access to recent court documents. The team wants a solution that allows the assistant to use current legal sources without retraining the model. What approach should they take?",
+    options: [
+      "Model distillation",
+      "Embedding visualization",
+      "Retrieval-augmented generation (RAG)",
+      "Data labeling"
+    ],
+    correctIndex: 2,
+    explanation:
+      "RAG combines a retrieval system with a generative model to dynamically fetch and incorporate relevant, up-to-date information at inference time. This allows the assistant to deliver more accurate and timely legal insights without retraining the base model.",
+    whyOthersWrong: [
+      "Model distillation is used to compress large models into smaller ones for efficiency but does not help the model access new information.",
+      "Embedding visualization is used for analyzing the model's understanding of relationships in data, not for improving response relevance.",
+      "Data labeling supports supervised learning tasks but does not allow live access to current external documents or databases.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q90",
+    sectionId: "business-strategies",
+    topicId: "data-quality",
+    question:
+      "A data scientist is launching a machine learning pipeline that collects live event logs from IoT devices and structured metadata from a relational database. What tools can support this data ingestion process?",
+    options: [
+      "Google Cloud offers services like Pub/Sub, Cloud SQL, and Cloud Storage.",
+      "Document AI pipelines are ideal for real-time structured and streaming data.",
+      "Gemini Advanced handles all forms of automated data intake.",
+      "Vertex AI Studio is used to collect all project data types directly."
+    ],
+    correctIndex: 0,
+    explanation:
+      "Google Cloud provides scalable ingestion tools: Pub/Sub for real-time streaming, Cloud SQL for structured data, and Cloud Storage for object-based storage. These tools support different data modalities that commonly appear in ML projects.",
+    whyOthersWrong: [
+      "Document AI is designed for processing documents, not ingesting live or structured data.",
+      "Gemini Advanced enhances productivity but doesn't handle raw data ingestion.",
+      "Vertex AI Studio supports model exploration, not ingestion of diverse data formats.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "easy",
+  },
+  {
+    id: "q91",
+    sectionId: "business-strategies",
+    topicId: "data-quality",
+    question:
+      "A data scientist at a telecommunications company is building a classifier to detect customer intent from email messages. They are working with a dataset of messages that have each been manually assigned a tag like 'Service Cancellation,' 'New Account Setup,' or 'Plan Upgrade.' What type of data are they using?",
+    options: [
+      "Semi-structured data",
+      "Unsupervised data",
+      "Synthetic data",
+      "Labeled data"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Labeled data refers to datasets that include input-output pairs, where each data point is annotated with the correct category or value. This is essential for training supervised learning models to learn accurate predictions.",
+    whyOthersWrong: [
+      "Semi-structured data includes formats like JSON or XML that have some organization but aren't fully tabular or relational; the focus here is on labeled classification.",
+      "Unsupervised data lacks labels entirely, which disqualifies it for use in supervised categorization tasks.",
+      "Synthetic data is artificially generated and may or may not be labeled; it doesn't describe manually tagged historical data.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "easy",
+  },
+  {
+    id: "q92",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "A financial services company is deploying a generative AI model to assist with customer onboarding and wants to reduce the risk of prompt injection attacks and unauthorized data exposure. Which Google-recommended security strategy should they implement to protect their AI systems end-to-end?",
+    options: [
+      "Store model training data only in a local spreadsheet for simplicity",
+      "Disable all IAM roles to avoid misconfiguration issues",
+      "Adopt the Secure AI Framework (SAIF) to embed protections throughout the AI lifecycle",
+      "Rely solely on rate limiting to mitigate advanced prompt manipulation"
+    ],
+    correctIndex: 2,
+    explanation:
+      "SAIF provides a structured framework for securing AI systems across the model lifecycle—from data handling and training to deployment and monitoring. It ensures proactive defenses against common threats like model manipulation, prompt injection, and data leakage.",
+    whyOthersWrong: [
+      "Spreadsheets lack the necessary scalability, governance, and security controls required for managing sensitive training data.",
+      "Disabling IAM roles entirely removes all access control, introducing serious security risks instead of preventing them.",
+      "Rate limiting alone cannot defend against nuanced AI-specific attacks like model exfiltration or adversarial prompts.",
+    ],
+    officialDoc: "https://cloud.google.com/security/ai",
+    difficulty: "hard",
+  },
+  {
+    id: "q93",
+    sectionId: "fundamentals",
+    topicId: "agents-applications",
+    question:
+      "An AI engineer at an edtech company is developing interactive 3D avatars for a virtual classroom. These avatars use facial expressions, voice inflection, and body language to engage with learners in real-time, responding contextually to questions and comments. What type of agent is being implemented?",
+    options: [
+      "Workflow automation agent",
+      "Creative generation agent",
+      "Conversational agent",
+      "Scheduling optimization agent"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Conversational agents are designed to interact with users in natural ways—using speech, text, or gestures—and are often used in environments like virtual assistants, chatbots, or immersive digital experiences. They focus on engaging in human-like dialogue and responses.",
+    whyOthersWrong: [
+      "Workflow automation agents are focused on handling repetitive business tasks and orchestrating backend processes, not human-like communication.",
+      "Creative generation agents are used for tasks like generating images, music, or stories—not conversational interaction.",
+      "Scheduling optimization agents are built for solving time or resource allocation challenges and do not simulate natural interaction.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q94",
+    sectionId: "google-cloud-offerings",
+    topicId: "grounding-rag",
+    question:
+      "A system administrator is helping the HR department build an AI assistant that can answer questions about HR policies, PTO rules, and remote work procedures. These documents are frequently updated and stored in Google Cloud Storage. What is the main advantage of using RAG APIs for this use case?",
+    options: [
+      "They automatically group similar employee questions to reduce duplicate chatbot responses.",
+      "They allow the team to analyze user behavior and improve the chatbot's personality settings.",
+      "They enable the generative AI model to retrieve the most up-to-date and relevant information from the policy documents in real-time.",
+      "They fine-tune the model using internal documentation to generate more personalized summaries."
+    ],
+    correctIndex: 2,
+    explanation:
+      "RAG (Retrieval-Augmented Generation) APIs let the AI assistant dynamically retrieve content from source documents at inference time. This ensures responses are based on the latest HR policies without requiring model retraining whenever documents change.",
+    whyOthersWrong: [
+      "Grouping questions is a post-processing or analytics feature, not a core function of RAG.",
+      "Personality tuning is related to prompt design or model parameters, not retrieval.",
+      "Fine-tuning is a separate and more resource-intensive process than using RAG for live document access.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q95",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A regional healthcare organization with limited technical staff wants to integrate AI into their patient support system. They hope to leverage AI capabilities without hiring a team of machine learning engineers. How does Google Cloud support such organizations in adopting AI?",
+    options: [
+      "By providing a comprehensive AI platform with low-code/no-code tools, pre-trained models, and easy-to-use APIs",
+      "By requiring users to manually fine-tune foundation models using Python-based notebooks",
+      "By offering an on-premises AI infrastructure package with custom GPU configurations",
+      "By limiting AI access to certified developers with verified experience in MLOps"
+    ],
+    correctIndex: 0,
+    explanation:
+      "Google Cloud democratizes AI by offering platforms like Vertex AI and tools such as Model Garden, PaLM API, and Generative AI Studio. These solutions allow users—regardless of technical background—to build, test, and deploy AI-powered applications through accessible interfaces, pre-built models, and minimal coding.",
+    whyOthersWrong: [
+      "While advanced users can fine-tune models manually, this is not required for adopting AI through Google Cloud's democratized tooling.",
+      "On-premises infrastructure does not align with Google Cloud's focus on scalable, cloud-native AI services.",
+      "Google Cloud encourages broader participation in AI and does not restrict access to users with formal ML certifications.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q96",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A data engineer is building a chatbot for an insurance provider that needs to respond to customer questions using only verified documents like policy manuals and claims guidelines stored in Google Cloud. What approach ensures the responses stay aligned with official content?",
+    options: [
+      "Increase the sampling temperature to generate more expressive answers.",
+      "Use one-shot prompting to structure responses based on example queries.",
+      "Tune the prompt length to prioritize policy-related keywords.",
+      "Use grounding to reference the company's official documents during generation."
+    ],
+    correctIndex: 3,
+    explanation:
+      "Grounding allows a generative AI model to pull from specific, trusted sources—such as internal documentation—ensuring outputs remain accurate and aligned with company policies. This avoids hallucinations and keeps responses compliant.",
+    whyOthersWrong: [
+      "Increasing temperature affects randomness, not content source.",
+      "One-shot prompting improves structure or tone but doesn't guarantee factual grounding.",
+      "Tuning prompt length or keyword priority does not restrict the source of information used in generation.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q97",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "A university admissions office deploys a generative AI tool to prioritize student applications, but reviewers find that qualified applicants are being rejected with no clear explanation. How should the team address this issue?",
+    options: [
+      "Increase the model's output length to include reasoning details.",
+      "Apply prompt chaining to walk through the review logic step-by-step.",
+      "Implement explainable gen AI policies to improve model transparency.",
+      "Retrain the model using student feedback from prior admission cycles."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Explainable gen AI practices ensure that stakeholders understand how AI models make decisions, especially in high-impact domains like hiring or admissions. This builds trust, identifies bias, and supports regulatory compliance.",
+    whyOthersWrong: [
+      "Output length affects response size but not the interpretability of decisions.",
+      "Prompt chaining structures logical steps but does not guarantee transparency in complex ranking systems.",
+      "Retraining may help performance but doesn't inherently address explainability or fairness.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "hard",
+  },
+  {
+    id: "q98",
+    sectionId: "google-cloud-offerings",
+    topicId: "grounding-rag",
+    question:
+      "A retail chain wants to help employees and customers find inventory details and product specs faster across their website and internal systems. Which Google Cloud gen AI solution best supports this?",
+    options: [
+      "Gemini for Workspace",
+      "Vertex AI Translation API",
+      "Pre-built RAG with Vertex AI Search",
+      "Cloud Vision API"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Pre-built retrieval-augmented generation (RAG) with Vertex AI Search enhances search capabilities by grounding responses in structured and unstructured business data, improving relevance for both internal and customer queries. It's ideal for dynamic product catalogs or large knowledge bases.",
+    whyOthersWrong: [
+      "Gemini for Workspace enhances productivity tools, not search capabilities.",
+      "Vertex AI Translation API translates content but doesn't improve search relevance.",
+      "Cloud Vision API analyzes images, not text or search queries.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/search/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q99",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A publishing startup is building a gen AI tool to summarize tech blogs and news from across the web in real time. What solution should they use to ensure summaries are timely and accurate?",
+    options: [
+      "Gemini Advanced with Gems",
+      "Vertex AI Model Garden",
+      "Grounding with Google Search",
+      "AutoML Tables"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Grounding with Google Search allows the model to access live, high-quality, and relevant information from across the web, making it ideal for generating accurate summaries of rapidly evolving content like blogs and news articles.",
+    whyOthersWrong: [
+      "Gemini Advanced focuses on productivity tasks, not live information grounding.",
+      "Model Garden offers pre-trained models but not real-time data access.",
+      "AutoML Tables is designed for tabular data, not text summarization or search.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q100",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A financial services company wants to empower its internal compliance analysts by giving them access to scattered regulatory documents, training materials, and internal policy updates. They need an AI-driven tool that helps them interact with these resources through natural language and custom workflows. What should they use?",
+    options: [
+      "Looker Studio",
+      "Google Cloud Agentspace",
+      "Vertex AI Model Garden",
+      "Gemma"
+    ],
+    correctIndex: 1,
+    explanation:
+      "Agentspace enables organizations to build AI agents that integrate with enterprise systems and data sources, helping employees access and interact with internal information easily using natural language. This improves productivity by turning scattered knowledge into actionable insights.",
+    whyOthersWrong: [
+      "Looker Studio is a BI and visualization tool used to create dashboards, not AI-powered agents or conversational access to data.",
+      "Vertex AI Model Garden is a model hub for selecting, testing, and fine-tuning models but doesn't provide custom agent interaction with enterprise data.",
+      "Gemma is a family of lightweight open models for text generation, but it does not provide orchestration or enterprise integration features like Agentspace.",
+    ],
+    officialDoc: "https://cloud.google.com/agentspace",
+    difficulty: "medium",
+  },
+  {
+    id: "q101",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A data analyst at a financial services firm is preparing a market insights report based on hundreds of internal whitepapers, investor presentations, and competitor analyses. They need an AI-powered tool that can extract summaries, draw links across content, and help structure key takeaways for presentation. What should the analyst use?",
+    options: [
+      "Gemini for Google Chat",
+      "NotebookLM",
+      "Vertex AI Agent Builder",
+      "Document AI"
+    ],
+    correctIndex: 1,
+    explanation:
+      "NotebookLM is designed to help users synthesize, organize, and generate insights from large volumes of source documents. It allows analysts to upload files, ask questions about them, and automatically generate summaries and connections across documents—making it ideal for research-heavy tasks.",
+    whyOthersWrong: [
+      "Gemini for Google Chat enhances productivity in chat environments but lacks the document-centric research capability of NotebookLM.",
+      "Vertex AI Agent Builder is intended for building conversational agents and not primarily for research synthesis.",
+      "Document AI focuses on structured document processing like form parsing and OCR, not contextual synthesis and insight generation.",
+    ],
+    officialDoc: "https://notebooklm.google/",
+    difficulty: "medium",
+  },
+  {
+    id: "q102",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "An IT administrator at a global electronics firm is leading a project to introduce generative AI to automate product documentation and internal workflows. What should the company prioritize to ensure employees adapt successfully to this AI-driven transformation?",
+    options: [
+      "Develop a comprehensive change management and training plan",
+      "Expect all departments to adjust naturally without formal onboarding",
+      "Roll out the tool silently and rely on users to self-learn its features",
+      "Focus solely on API integration and skip team-level communication"
+    ],
+    correctIndex: 0,
+    explanation:
+      "A structured change management and training plan ensures employees are equipped to adopt the technology confidently and productively. This approach includes stakeholder communication, skills development, support systems, and ongoing feedback, all of which contribute to sustainable adoption.",
+    whyOthersWrong: [
+      "Assuming organic understanding undermines readiness and slows productivity gains.",
+      "Silent implementation leads to confusion, resistance, or misapplication of the new tools.",
+      "Overlooking the human impact of tech integration can result in failed adoption despite technical success.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q103",
+    sectionId: "business-strategies",
+    topicId: "cost-optimization",
+    question:
+      "An AI project manager at a digital publishing company has deployed a generative AI tool to help editors generate article summaries faster. According to Google Cloud-recommended best practices, how should the team assess the effectiveness of this deployment?",
+    options: [
+      "Track how often editors interact with the tool, regardless of result quality",
+      "Assume the tool improves productivity based on internal feedback alone",
+      "Compare the solution's performance against predefined business metrics and KPIs",
+      "Measure only system metrics like latency and availability"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Evaluating the impact of a generative AI solution requires tying performance to clear business goals, such as reduced editorial time, increased publishing frequency, or content engagement metrics. This ensures the solution is delivering measurable value aligned with organizational objectives.",
+    whyOthersWrong: [
+      "Measuring usage without evaluating outcomes does not reflect the real impact or effectiveness of the AI tool.",
+      "Assuming success without data can lead to biased or incorrect conclusions, undermining decision-making.",
+      "Technical metrics are important for infrastructure, but alone they don't indicate the business value or effectiveness of the AI solution.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q104",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A government agency is deploying an AI chatbot to provide up-to-date information about policies and legal procedures. The LLM used has a knowledge cutoff and sometimes returns outdated answers. How can the agency solve this?",
+    options: [
+      "RAG helps filter sensitive content from the model's outputs.",
+      "RAG allows the model to retrieve real-time and current information from external sources.",
+      "RAG enhances response formatting using zero-shot prompting.",
+      "RAG boosts creativity by sampling from earlier conversation threads."
+    ],
+    correctIndex: 1,
+    explanation:
+      "Retrieval-augmented generation enables an LLM to access and incorporate external knowledge sources into its responses, allowing it to bypass its built-in knowledge cutoff and avoid hallucinations from outdated data. This is essential when up-to-date accuracy is required.",
+    whyOthersWrong: [
+      "Content filtering involves safety settings, not retrieval methods.",
+      "Zero-shot prompting helps with few-data scenarios but doesn't provide fresh knowledge.",
+      "Sampling from past conversations doesn't address outdated knowledge.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q105",
+    sectionId: "google-cloud-offerings",
+    topicId: "grounding-rag",
+    question:
+      "A human resources team is launching an AI assistant to answer employee questions about benefits and leave policies, which are stored in Google Cloud Storage and updated weekly. What is the main benefit of using RAG APIs?",
+    options: [
+      "They fine-tune the model using employee chat logs and usage behavior.",
+      "They allow the model to retrieve accurate and current information directly from source documents.",
+      "They generate visual dashboards of employee policy usage patterns.",
+      "They convert PDF documents into structured tables for analysis."
+    ],
+    correctIndex: 1,
+    explanation:
+      "RAG APIs enhance generative AI by retrieving real-time information from external or internal data sources, like frequently updated policy documents. This ensures that answers reflect the most recent content without retraining the model.",
+    whyOthersWrong: [
+      "Fine-tuning uses labeled datasets and is different from retrieval-based approaches.",
+      "Dashboards require analytics tools, not RAG APIs.",
+      "Converting PDFs into structured tables is handled by tools like Document AI, not RAG APIs.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q106",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "An enterprise software company with global development hubs wants to unify how team members access design documents, technical wikis, and support playbooks. What is a key benefit of using Google Agentspace?",
+    options: [
+      "Real-time network traffic analysis across office locations.",
+      "Automated approval workflows for engineering change requests.",
+      "Integration with third-party auditing software for process monitoring.",
+      "Seamless knowledge sharing and collaboration across internal systems."
+    ],
+    correctIndex: 3,
+    explanation:
+      "Google Agentspace enables teams to create AI-powered agents that unify access to internal knowledge sources, allowing users to retrieve and interact with information naturally. This breaks down knowledge silos and enhances collaboration across departments and geographies.",
+    whyOthersWrong: [
+      "Network monitoring is handled by infrastructure and security tools, not Agentspace.",
+      "Approval workflows may be built using other Google Cloud tools but aren't a primary use case for Agentspace.",
+      "Auditing software integration is unrelated to the core purpose of Agentspace.",
+    ],
+    officialDoc: "https://cloud.google.com/agentspace",
+    difficulty: "medium",
+  },
+  {
+    id: "q107",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "An AI engineer at a retail chain wants to build a generative AI agent that can check current stock levels from a Cloud SQL database and respond to supply chain queries. What is the most cost-effective solution for live data access?",
+    options: [
+      "Train a large foundation model using AutoML with historical inventory logs.",
+      "Use Gemini Advanced to manually check stock through chat prompts.",
+      "Use Google Cloud databases and Vertex AI for the agent to get live data.",
+      "Fine-tune a custom model with JSON snapshots of inventory files."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Connecting Vertex AI agents with Google Cloud databases allows real-time access to inventory without expensive fine-tuning. This setup is cost-effective and scalable, enabling the agent to retrieve and act on live data instantly.",
+    whyOthersWrong: [
+      "AutoML training is more expensive and unnecessary when real-time data access is needed.",
+      "Gemini Advanced is not designed for direct integration with cloud databases.",
+      "Fine-tuning on static files won't support live, dynamic queries required for inventory tracking.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q108",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A cloud architect at a global logistics firm is tasked with integrating generative AI into internal applications but wants to avoid vendor lock-in and retain flexibility to switch between models and tools over time. What core feature of Google Cloud addresses this requirement?",
+    options: [
+      "Google Cloud's emphasis on an open approach within its AI offerings.",
+      "Google Cloud's use of pre-trained agents only within Workspace environments.",
+      "Google Cloud's preference for single-stack proprietary models for performance.",
+      "Google Cloud's focus on bundling AI features exclusively with managed databases."
+    ],
+    correctIndex: 0,
+    explanation:
+      "Google Cloud promotes openness by supporting multiple foundation models, integration with open-source tools, and the flexibility to deploy or connect third-party services. This open strategy helps organizations avoid vendor lock-in while scaling AI initiatives.",
+    whyOthersWrong: [
+      "Workspace integrations are useful but don't reflect the broader open model ecosystem.",
+      "Proprietary-only models reduce flexibility and contradict an open ecosystem strategy.",
+      "AI services in Google Cloud are not restricted to database-related use cases or bundles.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q59",
+    sectionId: "ai-ml-fundamentals",
+    topicId: "ml-types-use-cases",
+    question:
+      "A data analyst at a logistics company is reviewing time-series GPS and engine sensor data collected from a fleet of delivery trucks. No labels are available, but the analyst wants to detect patterns, unusual behavior, and natural groupings in the data. What type of machine learning is most appropriate?",
+    options: [
+      "Unsupervised learning",
+      "Computer vision modeling",
+      "Reinforcement learning",
+      "Semi-supervised learning"
+    ],
+    correctIndex: 0,
+    explanation:
+      "Unsupervised learning is used when the dataset lacks labels and the goal is to discover hidden patterns, groupings, or anomalies. In this case, clustering or anomaly detection techniques can help identify unusual truck behavior or route performance without requiring pre-labeled data.",
+    whyOthersWrong: [
+      "Computer vision focuses on image data, not time-series sensor data.",
+      "Reinforcement learning is based on actions and rewards, and isn't suitable for static pattern detection.",
+      "Semi-supervised learning requires at least some labeled data, which is not available here.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "easy",
+  },
+  {
+    id: "q60",
+    sectionId: "google-cloud-offerings",
+    topicId: "agents-applications",
+    question:
+      "A biomedical lab wants to reduce the manual effort spent reviewing clinical trial documents by enabling researchers to ask natural language questions and receive summarized answers. The solution should require minimal coding. What should the team use?",
+    options: [
+      "Use Vertex AI Agent Builder to create a custom AI agent.",
+      "Use Cloud Vision API to extract images and diagrams from the research files.",
+      "Use Gemini for Workspace to enable AI-powered document editing and suggestions.",
+      "Use BigQuery ML to generate summaries based on word frequency patterns."
+    ],
+    correctIndex: 0,
+    explanation:
+      "Vertex AI Agent Builder enables teams to create conversational agents that can access, understand, and summarize enterprise data—such as research papers—using natural language. It's designed for low-code development and is well-suited for R&D environments.",
+    whyOthersWrong: [
+      "Cloud Vision API extracts visual content, not textual summaries or answers.",
+      "Gemini for Workspace enhances productivity tools like Docs and Sheets, but doesn't enable custom agent creation or document querying.",
+      "BigQuery ML can analyze patterns but does not generate conversational summaries or support agent workflows.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q61",
+    sectionId: "business-strategies",
+    topicId: "data-quality",
+    question:
+      "A retail company's data engineer is building a generative-AI pipeline to analyze thousands of free-form customer emails and social media posts about recent product launches. The messages vary widely in length, tone, and structure. Which best classifies the message content?",
+    options: [
+      "Structured data",
+      "Semi-structured data",
+      "Unstructured data",
+      "Time-series data"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Free-form natural-language text doesn't follow a fixed schema: sentences vary in length, grammar, tone, and layout. Even if platform APIs add metadata (timestamps, usernames), the message body itself remains unstructured.",
+    whyOthersWrong: [
+      "Structured data fits neatly into predefined fields (e.g., a table with columns like region, age, rating). The messages described are not in a consistent, columnar format.",
+      "Semi-structured data (e.g., JSON, XML, logs) has consistent keys/tags but flexible values. While a social post may arrive in a JSON envelope, the content you're analyzing (free-text) is still unstructured.",
+      "Time-series focuses on measurements indexed by time at regular intervals (prices, sensor readings). Although messages have timestamps, their primary nature is textual content, not time-indexed measurements.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q62",
+    sectionId: "google-cloud-offerings",
+    topicId: "security-services",
+    question:
+      "A data science team is deploying multiple gen AI solutions and needs a central tool to monitor vulnerabilities, misconfigurations, and threats across their cloud environment. What should they use?",
+    options: [
+      "Cloud Asset Inventory",
+      "Identity-Aware Proxy",
+      "Cloud Logging",
+      "Security Command Center"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Security Command Center offers a unified view of security risks, vulnerabilities, and threats across Google Cloud resources, including AI workloads. It helps ensure secure deployment and monitoring of generative AI models at scale.",
+    whyOthersWrong: [
+      "Cloud Asset Inventory helps track resources, not monitor security posture.",
+      "Identity-Aware Proxy controls access, not overall cloud security visibility.",
+      "Cloud Logging collects logs but does not provide centralized threat visibility.",
+    ],
+    officialDoc: "https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview",
+    difficulty: "easy",
+  },
+  {
+    id: "q63",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A financial services company is building an AI assistant to help analysts answer client questions. It must only respond using the company's internal policy documents. What should the company implement?",
+    options: [
+      "Use few-shot prompting.",
+      "Adjust the top-p parameter.",
+      "Ground the model using their internal documents.",
+      "Fine-tune with external datasets."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Grounding ensures the model only pulls information from the company's internal sources, avoiding hallucinations and maintaining accuracy. This is key for compliance-sensitive industries like finance.",
+    whyOthersWrong: [
+      "Few-shot prompting helps with formatting, not content control.",
+      "Top-p controls randomness, not data source.",
+      "Fine-tuning on external data increases risk of untrusted output.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q64",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "A machine learning engineer is explaining the role of generative AI in a company meeting. She states that gen AI models are designed to create new outputs—such as text, images, or code—based on learned data patterns. What accurately describes a generative AI model?",
+    options: [
+      "A browser-based tool that lets users prompt and query an AI system",
+      "A compliance checklist for validating ethical use of generative technologies",
+      "A complex algorithm trained on vast amounts of data to learn patterns and relationships",
+      "A hardware system designed to accelerate inference workloads for neural networks"
+    ],
+    correctIndex: 2,
+    explanation:
+      "A generative AI model is a type of machine learning model trained on large datasets to learn the underlying patterns in data and generate new, original outputs. It can create human-like content such as natural language, images, audio, and more using these learned representations.",
+    whyOthersWrong: [
+      "A browser-based tool is an interface to interact with gen AI but does not define what the model is.",
+      "A compliance checklist addresses governance and responsible use but is not the definition of the model itself.",
+      "While hardware accelerates model operations, it is not the model and does not describe the algorithmic nature of generative AI.",
+    ],
+    officialDoc: "https://cloud.google.com/ai/generative-ai",
+    difficulty: "easy",
+  },
+  {
+    id: "q65",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "A data scientist at a hospital is deploying a gen AI model to help radiologists identify anomalies in imaging results. To ensure the solution aligns with responsible AI principles and earns clinician trust, which consideration is most essential?",
+    options: [
+      "Allowing the model to override clinician judgment for faster decisions",
+      "Optimizing the model only for novel and creative diagnoses",
+      "Ensuring the system provides explanations for its recommendations",
+      "Avoiding visibility into the model's internal logic to simplify compliance"
+    ],
+    correctIndex: 2,
+    explanation:
+      "In high-stakes fields like healthcare, explainability helps professionals understand and trust AI outputs. Transparent insights into how the model arrived at its suggestions are vital for ethical use, informed decision-making, and regulatory compliance.",
+    whyOthersWrong: [
+      "Removing human oversight can jeopardize patient safety and violates key principles of responsible AI.",
+      "While creativity has value in some applications, medical AI systems must prioritize accuracy, consistency, and traceability over novelty.",
+      "Hiding model logic limits accountability and contradicts industry best practices and regulations.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "medium",
+  },
+  {
+    id: "q66",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "An AI product manager at a logistics firm is exploring the use of large language models (LLMs) to improve customer communication and automate responses to shipment queries. What is a core capability that makes LLMs suitable for this task?",
+    options: [
+      "LLMs are trained on vast datasets, enabling broad language and context understanding, and adaptability across many tasks.",
+      "LLMs rely on small, curated datasets for better precision in domain-specific scenarios.",
+      "LLMs specialize in scientific and mathematical problem solving without needing real-world examples.",
+      "LLMs automatically self-optimize their outputs over time without fine-tuning or intervention."
+    ],
+    correctIndex: 0,
+    explanation:
+      "LLMs are designed to generalize across a wide range of inputs by learning from massive and diverse datasets. This gives them the ability to understand nuanced language, follow context across turns, and perform well on a variety of tasks without domain-specific fine-tuning.",
+    whyOthersWrong: [
+      "Small, curated datasets are useful for fine-tuning, but LLMs need broad pretraining to generalize.",
+      "While LLMs can support reasoning, they do not inherently specialize in technical or mathematical problem solving.",
+      "LLMs do not self-optimize; they require explicit retraining or prompting strategies to improve behavior.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview",
+    difficulty: "easy",
+  },
+  {
+    id: "q67",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "A data scientist at a retail analytics firm wants to uncover meaningful groupings in customer behavior without using predefined labels. The goal is to understand how different types of customers interact with the store across various regions and products. What type of machine learning approach best fits this scenario?",
+    options: [
+      "Predicting which users are likely to return items using past return data",
+      "Analyzing transaction clusters to find natural segments in customer behavior",
+      "Training a sentiment model using labeled product review scores",
+      "Generating next-quarter revenue forecasts using past performance and ad spend"
+    ],
+    correctIndex: 1,
+    explanation:
+      "This is an example of unsupervised learning, where the system detects patterns and groups (clusters) in data without needing labeled outcomes. It is commonly used for customer segmentation, anomaly detection, and market basket analysis.",
+    whyOthersWrong: [
+      "Predicting return behavior based on past data is a classic supervised learning task, requiring labeled input-output pairs.",
+      "Training a model on labeled review scores is supervised learning, which uses predefined categories to guide prediction.",
+      "Revenue forecasting uses historical labeled data to predict future values, which falls under supervised regression models.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "medium",
+  },
+  {
+    id: "q68",
+    sectionId: "improve-output",
+    topicId: "grounding-rag",
+    question:
+      "A data scientist at a publishing company is using an LLM to answer customer inquiries about newly released books. However, the model returns outdated information due to its training cutoff. What should the team implement to fix this issue?",
+    options: [
+      "RAG applies auto-labeling to newly published content for classification.",
+      "RAG reduces token usage by compressing historical data into prompt templates.",
+      "RAG enables the LLM to retrieve relevant and up-to-date information from knowledge sources.",
+      "RAG uses feedback loops to continuously adjust the model's creativity settings."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Retrieval-augmented generation (RAG) solves the knowledge cutoff limitation by retrieving recent, external documents at inference time. This allows the model to generate responses based on current, verified content instead of outdated internal knowledge.",
+    whyOthersWrong: [
+      "Auto-labeling helps with classification tasks but doesn't inject live data into generation.",
+      "Reducing token count may improve efficiency but doesn't solve accuracy issues caused by outdated knowledge.",
+      "Creativity settings like temperature do not influence factual grounding or data freshness.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q69",
+    sectionId: "google-cloud-offerings",
+    topicId: "agents-applications",
+    question:
+      "A customer support engineer is deploying tools to help live agents respond more efficiently during active support calls. The goal is to surface real-time suggestions based on conversation context. Which Google Cloud solution should be used?",
+    options: [
+      "Contact Center AI provides omnichannel routing and CRM integration for automated support.",
+      "Conversation Insights generates post-call summaries and team-wide customer sentiment trends.",
+      "Agent Assist provides real-time assistance and recommended replies during live customer conversations.",
+      "Dialogflow CX is used to design and deploy virtual chatbots for self-service support."
+    ],
+    correctIndex: 2,
+    explanation:
+      "Agent Assist enhances live customer-agent interactions by delivering AI-generated suggestions, knowledge articles, and recommended responses in real time, improving efficiency and customer experience.",
+    whyOthersWrong: [
+      "Contact Center AI includes infrastructure and routing but does not offer real-time agent guidance.",
+      "Conversation Insights focuses on analytics and summaries after interactions, not real-time help.",
+      "Dialogflow CX supports virtual agent development but is not designed to assist live agents directly.",
+    ],
+    officialDoc: "https://cloud.google.com/solutions/contact-center",
+    difficulty: "medium",
+  },
+  {
+    id: "q70",
+    sectionId: "fundamentals",
+    topicId: "agents-applications",
+    question:
+      "A game development studio wants to help its engineers accelerate feature implementation by generating Unity or C# scripts from plain English descriptions. The AI assistant should also suggest improvements, detect bugs, and refactor code as needed. What type of agent should they use?",
+    options: [
+      "Workflow automation agent",
+      "Language translation agent",
+      "Data ingestion agent",
+      "Code agent"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Code agents are specialized generative AI agents designed to assist with writing, reviewing, debugging, and transforming natural language into source code. They improve developer productivity by automating coding tasks and ensuring consistency.",
+    whyOthersWrong: [
+      "Workflow automation agents handle process coordination or repetitive task execution rather than assisting with software development tasks.",
+      "Language translation agents are used to convert content between human languages, not programming languages or development workflows.",
+      "Data ingestion agents focus on collecting, formatting, and preparing data—not working with or generating code.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "easy",
+  },
+  {
+    id: "q71",
+    sectionId: "improve-output",
+    topicId: "prompting-techniques",
+    question:
+      "A retail company wants to ensure its generative AI assistant consistently communicates in the company's brand voice. Which technique would best help enforce alignment with the company's tone and communication style?",
+    options: [
+      "Switching to an open-source LLM with no prebuilt personality",
+      "Embedding product catalog data into the model weights",
+      "Increasing the top-k sampling value during generation",
+      "Role prompting"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Role prompting guides the model to adopt a specific persona or communication style by explicitly instructing it to respond as a defined role (e.g., a brand representative). This technique helps align output tone and behavior with the company's voice.",
+    whyOthersWrong: [
+      "Switching models without guidance on prompt strategy won't ensure consistency in tone or compliance with brand standards.",
+      "Embedding product data may improve factual accuracy but does not affect tone or voice alignment.",
+      "Increasing top-k expands the randomness of responses, which risks inconsistency rather than enforcing brand alignment.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies",
+    difficulty: "medium",
+  },
+  {
+    id: "q72",
+    sectionId: "google-cloud-offerings",
+    topicId: "gemini-vs-gemma",
+    question:
+      "A marketing engineer at a digital agency is tasked with generating custom promotional videos based on input briefs that include customer segments, value props, and campaign goals. The team wants an AI model that can generate high-quality videos that align with each brief. Which model should they use?",
+    options: [
+      "Imagen",
+      "Gemma",
+      "Gemini",
+      "Veo"
+    ],
+    correctIndex: 3,
+    explanation:
+      "Veo is Google's video generation foundation model that creates high-quality, dynamic video content from text and other multimodal inputs. It supports customized and engaging video generation suitable for marketing, storytelling, and sales purposes.",
+    whyOthersWrong: [
+      "Imagen is designed for generating photorealistic images from text but does not support full video generation.",
+      "Gemma is an open model family designed for lightweight and fine-tuned text generation tasks, not multimedia or video output.",
+      "Gemini is a multimodal model suited for text, image, code, and audio tasks, but not optimized for video generation.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/video/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q73",
+    sectionId: "google-cloud-offerings",
+    topicId: "vertex-ai-overview",
+    question:
+      "A machine learning engineer at a healthcare startup notices that different teams are independently training models, storing datasets in separate environments, and using inconsistent evaluation methods. The organization wants a unified platform to streamline model development, training, deployment, and monitoring. What should they adopt?",
+    options: [
+      "Cloud Run",
+      "Gemini in Google Sheets",
+      "Vertex AI",
+      "Google Cloud Pub/Sub"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Vertex AI offers a comprehensive platform to unify the AI lifecycle—including training, tuning, deploying, and monitoring ML models. It reduces redundancy, promotes collaboration across teams, and supports both custom and foundation models with scalable MLOps capabilities.",
+    whyOthersWrong: [
+      "Cloud Run is for deploying containerized applications but does not manage the full AI/ML workflow.",
+      "Gemini in Google Sheets provides assistance within spreadsheets but isn't suitable for managing enterprise AI pipelines.",
+      "Pub/Sub is a messaging service that supports event-driven architecture but doesn't support end-to-end AI model development and deployment.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform",
+    difficulty: "easy",
+  },
+  {
+    id: "q74",
+    sectionId: "improve-output",
+    topicId: "sampling-parameters",
+    question:
+      "A marketing analyst at a media company is configuring a generative AI tool to write promotional email content. They want the language to be creative and engaging without becoming incoherent or irrelevant. Which model sampling parameter should they focus on adjusting to best balance randomness and quality?",
+    options: [
+      "Token penalty",
+      "Stop sequence",
+      "Temperature",
+      "Model version"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Adjusting the temperature parameter directly influences the randomness of model outputs. A moderate temperature (e.g., 0.7) encourages diverse, imaginative responses while maintaining coherence, making it ideal for creative tasks like marketing copy.",
+    whyOthersWrong: [
+      "Token penalty is used to discourage repetition, not to balance creativity versus coherence.",
+      "Stop sequences define where the output should end but don't affect creativity or diversity of the response.",
+      "Choosing a different model version might affect performance or features, but it does not specifically tune output diversity or control creativity.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/adjust-parameter-values",
+    difficulty: "medium",
+  },
+  {
+    id: "q75",
+    sectionId: "fundamentals",
+    topicId: "model-limitations",
+    question:
+      "A data analyst at a fintech firm asks a generative AI assistant for the recent funding amount of a stealth-mode startup. The model replies with a specific figure and attributes it to a major financial outlet. After checking, the analyst realizes no such funding event or article exists. What does this behavior indicate about the model?",
+    options: [
+      "Hallucinations",
+      "Low context awareness",
+      "Outdated training data",
+      "Training bias"
+    ],
+    correctIndex: 0,
+    explanation:
+      "Hallucinations occur when a generative AI model fabricates plausible-sounding but false or unverifiable information. This is a known limitation of LLMs, especially when answering confidently about topics not grounded in its training data or external sources.",
+    whyOthersWrong: [
+      "Low context awareness would lead to vague or irrelevant answers, not confidently false ones.",
+      "Outdated training data refers to the knowledge cutoff issue, but this scenario is about invented information rather than missing it.",
+      "Training bias refers to systematic skew or prejudice in the model's output, not the generation of false facts.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "medium",
+  },
+  {
+    id: "q76",
+    sectionId: "fundamentals",
+    topicId: "agents-applications",
+    question:
+      "An education-focused startup hires an AI engineer to build an intelligent tutoring system that can evaluate learners' understanding, deliver adaptive exercises, guide lesson progression, and monitor performance analytics. Which type of AI solution is most appropriate to power this experience?",
+    options: [
+      "Customized learning agent",
+      "Basic rule-based chatbot embedded in a learning portal",
+      "Large-scale text summarization model",
+      "Pretrained model used for generalized content classification"
+    ],
+    correctIndex: 0,
+    explanation:
+      "A customized learning agent integrates multiple capabilities—such as knowledge assessment, lesson sequencing, personalized recommendations, and real-time feedback—making it ideal for adaptive, AI-powered education platforms. These agents are tailored to respond dynamically based on user interaction and performance.",
+    whyOthersWrong: [
+      "Rule-based chatbots provide limited functionality and do not support deep personalization or autonomous lesson delivery.",
+      "While summarization models are useful for condensing text, they lack the interactive, adaptive logic needed for personalized instruction and tracking.",
+      "A generalized content classification model can label content, but it cannot drive the end-to-end learning flow or assess student progress effectively.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q77",
+    sectionId: "fundamentals",
+    topicId: "llm-basics",
+    question:
+      "A retail enterprise is building an AI-powered virtual assistant that supports product troubleshooting and complex account inquiries for both new and returning customers. The assistant must remember prior parts of the conversation to provide accurate and coherent responses. Which capability should the development team prioritize when selecting a foundation model?",
+    options: [
+      "The model's ability to synthesize tabular data",
+      "The model's compatibility with image captioning tasks",
+      "The model's context window size",
+      "The model's licensing terms for commercial resale"
+    ],
+    correctIndex: 2,
+    explanation:
+      "A model's context window size determines how much information it can retain and reason over in a single interaction. For complex and multi-turn conversations like customer support, a larger context window enables the model to track prior queries and responses for more coherent dialogue.",
+    whyOthersWrong: [
+      "Tabular data synthesis is more relevant to analytics and structured data processing, not chatbot comprehension.",
+      "Image captioning is useful for vision-related applications, not text-based customer service interactions.",
+      "Licensing terms affect usage rights but are not a functional capability tied to a chatbot's ability to understand customer queries.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview",
+    difficulty: "medium",
+  },
+  {
+    id: "q78",
+    sectionId: "improve-output",
+    topicId: "prompting-techniques",
+    question:
+      "A banking app team is building a virtual assistant that helps users manage transactions and view account history. The assistant must reference earlier parts of the conversation to respond accurately. What prompting technique should the team apply?",
+    options: [
+      "Use temperature tuning to keep responses more balanced and consistent.",
+      "Use keyword tagging to match user intents with static templates.",
+      "Use zero-shot prompting to minimize training data needs.",
+      "Use prompt chaining to maintain and pass context between turns."
+    ],
+    correctIndex: 3,
+    explanation:
+      "Prompt chaining links multiple prompts together, allowing the model to retain context from previous interactions. This technique is essential in scenarios like banking or customer support where earlier conversation history must influence later responses.",
+    whyOthersWrong: [
+      "Temperature tuning adjusts randomness, not conversational memory.",
+      "Keyword tagging helps with intent recognition but does not maintain dialogue continuity.",
+      "Zero-shot prompting gives quick answers without prior examples but doesn't preserve context.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies",
+    difficulty: "medium",
+  },
+  {
+    id: "q79",
+    sectionId: "business-strategies",
+    topicId: "responsible-ai",
+    question:
+      "A data analyst at a logistics company is rolling out a generative AI tool that automatically recommends delivery routes based on historical performance and real-time factors. To maintain user trust in the AI's decisions, which responsible AI principle should be prioritized?",
+    options: [
+      "Reducing processing time by omitting context for each recommendation",
+      "Hiding decision logic to protect internal algorithms from users",
+      "Providing transparency and explainability about how decisions are made",
+      "Collecting excess route data to improve model creativity"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Transparency and explainability are critical for building trust in automated systems, especially when they influence real-world operations. By helping users understand how decisions are made, organizations can ensure accountability and foster confidence in AI outputs.",
+    whyOthersWrong: [
+      "Prioritizing speed at the expense of clarity can erode trust and introduce operational risk.",
+      "Hiding decision logic contradicts responsible AI principles and limits user oversight.",
+      "Gathering excessive or irrelevant data can raise privacy concerns and doesn't inherently improve user trust or model output quality.",
+    ],
+    officialDoc: "https://cloud.google.com/responsible-ai",
+    difficulty: "medium",
+  },
+  {
+    id: "q80",
+    sectionId: "google-cloud-offerings",
+    topicId: "gemini-vs-gemma",
+    question:
+      "A product designer at a consumer electronics company needs to generate realistic marketing images of new concept devices before they are physically manufactured. The visuals must be photorealistic and generated directly from product descriptions. What foundation model should be used?",
+    options: [
+      "Gemma",
+      "Chirp",
+      "Imagen",
+      "Gemini"
+    ],
+    correctIndex: 2,
+    explanation:
+      "Imagen is Google's foundation model for high-quality text-to-image generation. It is optimized for producing photorealistic visuals from detailed descriptions, making it ideal for industries like design, advertising, and media where visual content needs to be produced at scale and low cost.",
+    whyOthersWrong: [
+      "Gemma is a lightweight open-source LLM used for text generation, not image creation.",
+      "Chirp is designed for speech-to-text and audio processing tasks.",
+      "Gemini is a multimodal foundation model but is not specialized for generating photorealistic images.",
+    ],
+    officialDoc: "https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview",
+    difficulty: "easy",
+  },
 ]
 
 export const GLOSSARY: { term: string; definition: string; category: string }[] = [
