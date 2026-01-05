@@ -8,6 +8,12 @@ Open-source study platform for the **Google Cloud Generative AI Leader (GAIL) Ce
 
 This is **NOT** an official Google product. Content is community-maintained and should be verified against official documentation. Always use official Google Cloud resources as your primary study material.
 
+## ✓ Certification Achieved
+
+I successfully passed the **Google Cloud Generative AI Leader certification** on **January 3rd, 2025**. This project helped me prepare effectively for the exam.
+
+[🏆 View my Credly credential](https://www.credly.com/badges/86ce0288-fb86-403f-abde-6cd772f53b56)
+
 ## Features
 
 - 📚 **Study Materials** - Comprehensive content organized by exam domains
