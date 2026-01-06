@@ -10,7 +10,7 @@ This is **NOT** an official Google product. Content is community-maintained and 
 
 ## ✓ Certification Achieved
 
-I successfully passed the **Google Cloud Generative AI Leader certification** on **January 3rd, 2025**. This project helped me prepare effectively for the exam.
+I successfully passed the **Google Cloud Generative AI Leader certification** on **January 3rd, 2026**. This project helped me prepare effectively for the exam.
 
 [🏆 View my Credly credential](https://www.credly.com/badges/86ce0288-fb86-403f-abde-6cd772f53b56)
 
