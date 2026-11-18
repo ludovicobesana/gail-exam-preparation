@@ -268,10 +268,10 @@ export function ExamClient({ questions, sections }: Props) {
                 className += " ring-2 ring-foreground ring-offset-2"
               }
               
-              if (answered) {
-                className += " bg-foreground text-background"
-              } else if (isFlagged) {
+              if (isFlagged) {
                 className += " bg-yellow-400 text-black border-2"
+              } else if (answered) {
+                className += " bg-foreground text-background"
               }
 
               return (
